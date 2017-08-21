@@ -26,7 +26,6 @@ Hosting on Heroku
 -Production README
 
 
-[About](./schema.md/)
 ## Design Docs
 
 [View Wireframes](./wireframes)
