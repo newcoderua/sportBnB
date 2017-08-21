@@ -65,7 +65,7 @@
 
       id: 32,
 
-      body_id: 13,
+      buddy_id: 13,
 
       feedbacker_name: "some weirdo from internet",
 
@@ -100,7 +100,7 @@
 
           id: 1,
 
-          body_id: 2,
+          buddy_id: 2,
 
           feedbacker_name: "Raul"
 

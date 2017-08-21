@@ -34,7 +34,7 @@ Hosting on Heroku
 
 [API endpoints](./api-endpoints.md)
 
-[DB schema](./schema.md/)
+[DB schema](./schema/)
 
 [Sample State](./sample-state.md/)
 
