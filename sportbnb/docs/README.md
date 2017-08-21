@@ -16,18 +16,27 @@ By September 8, 2017, this app will, at a minimum, satisfy the following criteri
 Hosting on Heroku
 
 -New account creation, login, guest/demo login
+
 -Allow user to search for available buddies(sport trainers) by providing details
+
 -Then book a desired person(who can help you working out efficiently)
+
 -Allow users to leave feedbacks for the buddies
+
 -Production README
+
 
 [About](./schema.md/)
 ## Design Docs
 
 [View Wireframes](./wireframes)
+
 [React Components](../frontend/components)
+
 [API endpoints](./api-endpoints.md)
+
 [DB schema](./schema.md/)
+
 [Sample State](./sample-state.md/)
 
 ## Implementation Timeline
@@ -51,5 +60,7 @@ Objectives Allow users to write feedbacks for chefs, allow feedbacks to show for
 ### Phase 5: Bonus Features (Time remaining)
 
 💲 Add Invoice / Billing
+
 ✉️ Built-in messaging Between Client and Chefs
+
 😎 Enrich site content
