@@ -1,4 +1,4 @@
-[About](/schema/)
+[About](/schema.md/)
 
 HomeCooking
 
