@@ -60,6 +60,8 @@ Objectives Allow users to write feedbacks for chefs, allow feedbacks to show for
 
 💲 Add Invoice / Billing
 
+🏄 Become a Buddy(coach)
+
 ✉️ Built-in messaging Between Client and Chefs
 
 😎 Enrich site content
