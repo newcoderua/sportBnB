@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      render 'api/user/show'
+      render 'api/users/show'
     else
       render json: ["invalid credentials"],status: 422
     end
@@ -21,7 +21,7 @@ class Api::SessionsController < ApplicationController
       logout
       render json: {}
     else
-      render json: ["no current user"], status: 404 
+      render json: ["no current user"], status: 404
     end
   end
 

@@ -19,9 +19,12 @@ class SessionForm extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({
+    return e => {
+      console.log(field)
+      this.setState({
       [field]: e.currentTarget.value
     });
+  }
   }
 
   handleSubmit(e) {
@@ -54,10 +57,8 @@ class SessionForm extends React.Component {
     return(
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Hey, good to see you at Sport BnB 🏄
           <br/>
-          Please { this.props.formType } or { this.navLink() }
-          {this.renderErrors()}
+          { this.navLink() }
         <div className="login-form">
           <br/>
           <label>Username:
@@ -71,7 +72,7 @@ class SessionForm extends React.Component {
           <label>Email:
             <input type="text"
               value={this.state.email}
-              onChange={this.update('email')}
+              onChange={this.update("email")}
               className="login-input"
             />
           </label>

@@ -16,10 +16,12 @@ import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
   <div>
-    <header>
-      <h1>Sport BnB</h1>
-        <nav>
-          <NavLink to="/" className="header-link">Link to main page</NavLink>
+    <header  className="header-class">
+        <nav className="header-nav-class">
+          <NavLink to="/" className="header-link">
+            <img src="/assets/logo.png"
+              alt="logo"/>
+          </NavLink>
           <GreetingContainer />
         </nav>
     </header>
