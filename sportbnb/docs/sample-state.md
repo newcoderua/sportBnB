@@ -6,7 +6,12 @@
 
     name: "John Doe",
 
-    type: "client"
+    type: "client",
+
+    feeback_ids: [],
+
+    reservations_ids: [],
+
 
   },
 
@@ -65,9 +70,7 @@
 
       id: 32,
 
-      buddy_id: 13,
-
-      feedbacker_name: "some weirdo from internet",
+      feedbacker_id: 13,
 
       date: 08/08/2016,
 
@@ -86,6 +89,8 @@
 
       name: "Zinadine Zidane",
 
+      feeback_ids: [],
+
       bio: "I am a coach in Real Madrid",
 
       sport: "soccer",
@@ -94,21 +99,6 @@
 
       rate: 98,
 
-      feedbacks: {
-
-        1: {
-
-          id: 1,
-
-          buddy_id: 2,
-
-          feedbacker_name: "Raul"
-
-          body: "I totally respect what you do",
-
-          date: 06/06/2016
-
-        },
 
       }
 
