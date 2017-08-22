@@ -19,7 +19,7 @@ const App = () => (
     <header  className="header-class">
         <nav className="header-nav-class">
           <NavLink to="/" className="header-link">
-            <img src="/assets/logo.png"
+            <img src={ window.staticImages.sportBnB }
               alt="logo"/>
           </NavLink>
           <GreetingContainer />
