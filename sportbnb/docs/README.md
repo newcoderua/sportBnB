@@ -44,17 +44,17 @@ Hosting on Heroku
 
 Objective: Functioning rails project with front-end authentication
 
-### Phase 2: Seed Chefs, Chefs backend, Chefs Search/Index/Index-Items/Display (2 days)
+### Phase 2: Seed Buddies, Buddies backend, Buddies Search/Index/Index-Items/Display (2 days)
 
-Objective: Have chefs in database. Have frontend seach index, and profile display pages for chefs
+Objective: Have buddies in database. Have frontend seach index, and profile display pages for buddies
 
 ### Phase 3: Reservations Model, API, and components (2 days)
 
-Objective: Users can make reservations with chefs selected from a list of available chefs using user provided data. Chefs should then be able to confirm, or decline the reservation.
+Objective: Users can make reservations with buddies selected from a list of available buddies using user provided data. Buddies should then be able to confirm, or decline the reservation.
 
 ### Phase 4: Feedbacks Model, API, and components (2 days)
 
-Objectives Allow users to write feedbacks for chefs, allow feedbacks to show for each chef.
+Objectives Allow users to write feedbacks for buddies, allow feedbacks to show for each buddy.
 
 ### Phase 5: Bonus Features (Time remaining)
 
@@ -62,6 +62,6 @@ Objectives Allow users to write feedbacks for chefs, allow feedbacks to show for
 
 🏄 Become a Buddy(coach)
 
-✉️ Built-in messaging Between Client and Chefs
+✉️ Built-in messaging Between Client and Buddies
 
 😎 Enrich site content
