@@ -5,7 +5,7 @@
 body {
   perspective: 800px;
   -webkit-perspective: 800px;
-  background-image: url('/assets/back1.png');
+  font-size: 12px;
 }
 
 .main-page {
@@ -76,5 +76,15 @@ body {
 }
 
 .login-form > label {
-  font-size: 25px;
+  font-size: 30px;
+}
+
+.login-form > input {
+  font-size: 50px;
+}
+
+.login-input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
 }

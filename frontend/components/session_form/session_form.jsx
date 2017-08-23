@@ -41,9 +41,11 @@ class SessionForm extends React.Component {
         </Link>;
       </span>
     } else {
-      return <Link to="/login" id="nav-link">
-              Please Log In if you have an account
-            </Link>;
+      return <span> Please &nbsp;
+              <Link to="/login" id="nav-link">
+                Log In
+              </Link> &nbsp; if you have an account
+            </span>;
     }
   }
 

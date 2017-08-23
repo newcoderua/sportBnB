@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-image: url('/assets/back1.png');
+   font-family: sans-serif;
+ }
