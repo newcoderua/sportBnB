@@ -12,6 +12,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+#logo-image {
+  width: 150px;
+  height: 150px;
+}
 .header-nav-class {
   background-color: #F5F3EE;
   opacity: 0.8;
@@ -29,14 +34,7 @@ body {
   align-items: center;
 }
 
-#logo-image {
-  max-height: 280px;
-  max-width: 280px;
-  width: 190px;
-  height: 180px;
-  display: flex;
-  align-self: center;
-}
+
 
 #login-link, #signup-link {
   color: black;
@@ -98,3 +96,12 @@ body {
   padding-left: 7px;
   width: 180;
 }
+
+.header-name {
+  font-family: Cambria, Georgia, serif;
+  	font-size: 20px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 15.4px;
+  }

@@ -14,6 +14,10 @@ class SessionForm extends React.Component {
     this.loginGuest = this.loginGuest.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push(`/`);
@@ -106,9 +110,9 @@ class SessionForm extends React.Component {
             />
           </label>
           <br/>
-          <input type="submit" value="Submit" />
+          <input type="submit" className="button yahoo" value="Submit" />
           <br/>
-          <button className="form-button" onClick={this.loginGuest}><span>Log In as Guest</span></button>
+          <button className="button yahoo" onClick={this.loginGuest}>Log In as Guest</button>
 
           <br/>
           { this.navLink() }

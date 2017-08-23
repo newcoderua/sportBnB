@@ -20,3 +20,10 @@ export const logout = () => (
     url: '/api/session'
   })
 );
+
+export const fetchBuddies = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/buddies'
+  })
+);
