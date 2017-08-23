@@ -20,7 +20,9 @@ const App = () => (
         <nav className="header-nav-class">
           <NavLink to="/" className="header-link">
             <img src={ window.staticImages.sportBnB }
-              alt="logo"/>
+              alt="logo"
+              id="logo-image"
+              />
           </NavLink>
           <GreetingContainer />
         </nav>
