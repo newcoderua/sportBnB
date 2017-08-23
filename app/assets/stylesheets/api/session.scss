@@ -3,11 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: lightgrey;
+  perspective: 800px;
+  -webkit-perspective: 800px;
+  background-image: url('/assets/back1.png');
 }
 
+.main-page {
+  display: flex;
+  justify-content: space-between;
+}
 .header-nav-class {
-  background-color: red;
+  background-color: #F5F3EE;
+  opacity: 0.8;
   display: flex;
   justify-content: space-between;
   height: 150px;
@@ -18,7 +25,7 @@ body {
 .login-signup {
   display: flex;
   font-size: 25px;
-  color: white;
+  color: black;
   align-items: center;
 }
 
@@ -32,8 +39,8 @@ body {
 }
 
 #login-link, #signup-link {
-  color: white;
-  border: 3px solid white;
+  color: black;
+  border: 1px solid black;
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
@@ -53,17 +60,19 @@ body {
 }
 
 .login-form {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
   display: flex;
+  background-color: #F5F3EE;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid #F5F3EE;
   padding: 5px;
   margin: 5px;
+  opacity: 0.8;
 }
 
 .login-form > label {

@@ -27,10 +27,11 @@ const App = () => (
           <GreetingContainer />
         </nav>
     </header>
-    <Switch>
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
-    </Switch>
+      <Switch className="switch-class">
+        <Route path="/login" component={SessionFormContainer} />
+        <Route path="/signup" component={SessionFormContainer} />
+      </Switch>
+
   </div>
 );
 

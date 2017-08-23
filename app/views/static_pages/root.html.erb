@@ -2,8 +2,9 @@
   window.staticImages = {
     sportBnB: "<%= image_path('logo.png') %>"
   }
-  window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
-
+  <% if signed_in? %>
+    window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+  <% end %>
 </script>
 
 
