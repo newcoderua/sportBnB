@@ -42,13 +42,7 @@ class MainPage extends React.Component {
           Just pick sport that you interested in, date, time and location...
           <br />
           <br />
-          <div class="dropdown">
-            <button class="dropbtn">Looking for another sport ?</button>
-              <div class="dropdown-content">
-                <a href="#">Soccer</a>
-                <a href="#"></a>
-                <a href="#">Link 3</a>
-          </div>
+          
           </div>
       </div>
     );
