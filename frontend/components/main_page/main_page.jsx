@@ -7,6 +7,7 @@ import {
   NavLink,
   HashRouter
 } from 'react-router-dom';
+// import SearchForm '../search_form/search_form_container';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -21,21 +22,25 @@ class MainPage extends React.Component {
   render() {
     return(
       <div className="text-main-page">
-        <div>
-          <h3>
-            <b>SportBnB</b>&nbsp;
-            stands for Sport <b>BODY</b>
-          and <b>BUDDY</b>
+        <div className="inner-text-main-page">
+            SportBnB &nbsp;
+            stands for Sport BODY
+          and BUDDY
+        <br/>
         <br/>
           Do you like SPORT? Do you want
           a great BODY?
           <br/>
+          <br/>
           But working out alone is boring?
+          <br/>
           <br/>
           We can find you a BUDDY(professional coach).
           <br/>
+          <br/>
           Just pick sport that you interested in, date, time and location...
-          </h3>
+          <br />
+          <br />
           </div>
       </div>
     );

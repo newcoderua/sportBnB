@@ -1,12 +1,26 @@
 .text-main-page {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-text-main-page {
   display: flex;
   justify-content: center;
   font-size: 18px;
-  border: 1px solid grey;
-  background-color: white;
+  border-radius: 5px;
   width: 540px;
   height: 250px;
   border-radius: 5px;
   opacity: 0.8;
-  color: black;
+  background-color: #001f3f;
+  opacity: 0.5;
+  font-style: italic;
+  padding: 5px;
+  margin: 5px;
+}
+
+.inner-text-main-page {
+  color: white
 }
