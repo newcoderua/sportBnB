@@ -7,14 +7,16 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: '',
+      email: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginGuest = this.loginGuest.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      this.props.history.push(`/`);
     }
   }
 
@@ -29,13 +31,14 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     const user = this.state;
     this.props.processForm({ user });
   }
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <span>Do not you have an account?
+      return <span>Do not you have an account?&nbsp;
         <Link to="/signup" id="nav-link">
            Sign Up
         </Link>;
@@ -49,7 +52,16 @@ class SessionForm extends React.Component {
     }
   }
 
+  loginGuest(e) {
+    e.preventDefault();
+    const guest = { user: {username: "Albert_Einstein", email: "Albi@yahoo.com", password :"654321"}}
+    this.props.login(guest);
+  }
+
   renderErrors() {
+    if (this.props.errors === undefined) {
+      return;
+      }
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -96,6 +108,9 @@ class SessionForm extends React.Component {
           </label>
           <br/>
           <input type="submit" value="Submit" />
+          <br/>
+          <button className="form-button" onClick={this.loginGuest}><span>Log In as Guest</span></button>
+
           <br/>
           { this.navLink() }
           { this.renderErrors()}

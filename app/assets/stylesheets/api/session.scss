@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  perspective: 800px;
-  -webkit-perspective: 800px;
-  font-size: 12px;
+
+  background-image: image-url('back1.png');
+  font-family: sans-serif;
 }
 
 .main-page {
@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   height: 150px;
   border-radius: 10px;
-
+  height: 140px;
 }
 
 .login-signup {
@@ -55,18 +55,19 @@ body {
 .login-form-container {
   display: flex;
   justify-content: center;
+  height: 550px;
   // font-size: 25px;
 
 }
 
 .login-form {
   width: 350px;
-  height: 400px;
+  height: 500px;
   display: flex;
   background-color: #F5F3EE;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
   border-radius: 5px;
   border: 2px solid #F5F3EE;
@@ -87,4 +88,13 @@ body {
   width: 200px;
   height: 25px;
   border-radius: 5px;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.header-group, .header-button {
+  font-size: 15px;
+  margin-right: 7px;
+  padding-left: 7px;
+  width: 180;
 }

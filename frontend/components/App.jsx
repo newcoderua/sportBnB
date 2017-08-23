@@ -12,7 +12,7 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
+import MainPageContainer from './main_page/main_page_container';
 
 const App = () => (
   <div>
@@ -30,8 +30,8 @@ const App = () => (
       <Switch className="switch-class">
         <Route path="/login" component={SessionFormContainer} />
         <Route path="/signup" component={SessionFormContainer} />
+        <MainPageContainer />
       </Switch>
-
   </div>
 );
 
