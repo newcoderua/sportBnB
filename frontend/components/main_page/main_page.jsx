@@ -7,6 +7,7 @@ import {
   NavLink,
   HashRouter
 } from 'react-router-dom';
+
 // import SearchForm '../search_form/search_form_container';
 
 class MainPage extends React.Component {
@@ -41,6 +42,13 @@ class MainPage extends React.Component {
           Just pick sport that you interested in, date, time and location...
           <br />
           <br />
+          <div class="dropdown">
+            <button class="dropbtn">Looking for another sport ?</button>
+              <div class="dropdown-content">
+                <a href="#">Soccer</a>
+                <a href="#"></a>
+                <a href="#">Link 3</a>
+          </div>
           </div>
       </div>
     );
