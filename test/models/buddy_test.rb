@@ -10,6 +10,7 @@
 #  best_achievement :text             not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  image_url        :string
 #
 
 require 'test_helper'

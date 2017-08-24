@@ -1,6 +1,8 @@
 class Api::BuddysController < ApplicationController
   def index
+    debugger
     @buddies = Buddy.all
+    render :index
   end
 
   def show

@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { fetchBuddies } from '../../actions/session_actions';
+import { receiveCurrentUser } from '../../actions/session_actions';
+import { fetchBuddies } from '../../actions/buddy_actions';
 import BuddiesForm from './buddies_form';
 
-const mapStateToProps = (state) => ({
-  buddies
-});
+const mapStateToProps = (state) => {
+  // debugger
+  return {
+  currentUser: state.session.currentUser,
+  buddies: state.buddies
+}};
 
 const mapDispatchToProps = dispatch => ({
-  fetchBuddies: () => dispatch(fetchBuddies())
+  fetchBuddies: () => dispatch(fetchBuddies()),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BuddiesForm);
+export default connect(mapStateToProps, mapDispatchToProps)(BuddiesForm);

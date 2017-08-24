@@ -22,7 +22,7 @@ class MainPage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div id="whole-main-page">
       <div className="text-main-page">
         <div className="inner-text-main-page">
             SportBnB &nbsp;
@@ -47,12 +47,12 @@ class MainPage extends React.Component {
       </div>
       <div className="outer-dropdown">
         <div className="dropdown">
-            <button className="dropbtn">Looking for another sport ?</button>
-            <div className="dropdown-content">
-              <a href="http://www.realmadrid.com/en">Soccer</a>
-              <a href="#">Basketball</a>
-              <a href="#">Baseball</a>
-            </div>
+          <button className="dropbtn">Looking for another sport ?</button>
+          <div className="dropdown-content">
+            <a href="http://www.realmadrid.com/en">Soccer</a>
+            <a href="#">Basketball</a>
+            <a href="#">Baseball</a>
+          </div>
         </div>
       </div>
       </div>
