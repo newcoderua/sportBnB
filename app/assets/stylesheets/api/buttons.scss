@@ -1,4 +1,4 @@
-a.button.yahoo, .button.yahoo {
+a.button.yahoo, .button.yahoo, .index-item-button {
     background: #be95b7;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#be95b7), to(#5f396a));
     background: -moz-linear-gradient(#be95b7, #5f396a);
@@ -13,7 +13,7 @@ a.button.yahoo, .button.yahoo {
     border-radius: 3px;
 }
 
-a.button.yahoo:hover, .button.yahoo:hover {
+a.button.yahoo:hover, .button.yahoo:hover, .index-item-button {
     background: #5f396a;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5f396a), to(#be95b7));
     background: -moz-linear-gradient(#5f396a, #be95b7);
@@ -22,7 +22,7 @@ a.button.yahoo:hover, .button.yahoo:hover {
     border-bottom: solid 3px #4d2955;
     box-shadow: inset 0 0 0 1px #9c83a1; }
 
-a.button.yahoo:active, .button.yahoo:active {
+a.button.yahoo:active, .button.yahoo:active, .index-item-button {
     background: #5f396a;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5f396a), to(#be95b7));
     background: -moz-linear-gradient(#5f396a, #be95b7);
@@ -32,4 +32,10 @@ a.button.yahoo:active, .button.yahoo:active {
 
 #close-modal {
   align-self: flex-end;
+}
+
+.index-item-button {
+  max-width: 70px;
+  max-height: 35px;
+  font-size: 70%;
 }

@@ -1,6 +1,6 @@
-class Api::BuddysController < ApplicationController
+class Api::BuddiesController < ApplicationController
   def index
-    debugger
+    # debugger
     @buddies = Buddy.all
     render :index
   end
@@ -9,18 +9,18 @@ class Api::BuddysController < ApplicationController
     @chef = Buddy.find(params[:id])
   end
 
-  def search
-    if params[:query].present?
-      @buddies = Buddy.where('username ~ ?', params[:query])
-    else
-      @buddies = Buddy.none
-    end
-
-    respond_to do |format|
-      format.html { render :search }
-      format.json { render :search }
-    end
-  end
+  # def search
+  #   if params[:query].present?
+  #     @buddies = Buddy.where('username ~ ?', params[:query])
+  #   else
+  #     @buddies = Buddy.none
+  #   end
+  #
+  #   respond_to do |format|
+  #     format.html { render :search }
+  #     format.json { render :search }
+  #   end
+  # end
 
   private
 

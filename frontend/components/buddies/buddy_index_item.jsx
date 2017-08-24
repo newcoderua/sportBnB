@@ -1,40 +1,44 @@
 import React from "react";
-import { Link, hashHistory, withRouter } from 'react-router';
+import { Link, hashHistory, withRouter } from 'react-router-dom';
 
-const BuddyIndexItem = ({ buddy }) => {
-
+export const BuddyIndexItem = ({ buddy }) => {
+// debugger
   return (
-    <li className="index-item" key={buddy.id}>
-      <figure className="index-buddy-pic-frame">
-        <Link to={`/buddies/${buddy.id}`}>
-          <img className="index-buddy-pic" src={buddy.image_url} alt={buddy.name} />
-        </Link>
-        <Link to={`/buddies/${buddy.id}/reservation`}>
-          <button className="index-item-button">
-            <span>Book Buddy</span>
-          </button>
-        </Link>
-      </figure>
-      <section className="index-buddy-content">
-        <div className="index-buddy-title cf">
-          <div className="index-buddy-name">
-            <Link to={`/buddies/${buddy.id}`}>
-              {buddy.name}
-            </Link>
+    <div className="outer-index-item">
+      <li className="index-item">
+        <figure className="index-buddy-pic-frame">
+          <span>
+          <Link to={`/buddies/${buddy.id}`}>
+            <img className="index-buddy-pic" src={buddy.image_url} alt={buddy.name} />
+          </Link>
+          </span>
+          <br/>
+          <span>
+          <Link to={`/buddies/${buddy.id}/reservation`}>
+            <button className="index-item-button">
+              <span>Book Buddy</span>
+            </button>
+          </Link>
+          </span>
+        </figure>
+
+        <section className="index-buddy-content">
+
+          <div className="index-buddy-title-cf">
+            <div className="index-buddy-name">
+              <Link to={`/buddies/${buddy.id}`}>
+                {buddy.name}
+              </Link>
+            </div>
+            <div className="index-buddy-rate">${buddy.rate}</div>
+          </div>  <br/>
+
+          <div className="index-achivement">
+            {buddy.best_achievement}
           </div>
-          <div className="index-buddy-rate">${buddy.rate}</div>
-        </div>
-        <div className="index-achivement">
-          {buddy.best_achievement}
-        </div>
-        <div className="index-buddy-feedback">
 
-
-
-        </div>
-      </section>
-    </li>
+        </section>
+      </li>
+    </div>
   );
 }
-
-export default BuddyIndexItem;

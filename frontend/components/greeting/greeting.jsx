@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
@@ -11,17 +11,25 @@ const sessionLinks = () => (
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
-	<hgroup className="header-group">
-    <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    <Link to="/buddies" className="button yahoo">Our Buddies</Link>
-    &nbsp;&nbsp;
-    <button className="button yahoo" onClick={logout}>Log Out</button>
-	</hgroup>
+
+const personalGreeting = (currentUser, logout, history) => {
+
+  const handleLogOut = () => {
+    logout().then(() => history.push("/"))
+  }
+  return (
+
+    <hgroup className="header-group">
+      <h2 className="header-name">Hi, {currentUser.username}!</h2>
+      <Link to="/buddies" className="button yahoo">Our Buddies</Link>
+      &nbsp;&nbsp;
+      <button className="button yahoo" onClick={handleLogOut}>Log Out</button>
+    </hgroup>
+  )
+};
+
+const Greeting = ({ currentUser, logout, history }) => (
+  currentUser ? personalGreeting(currentUser, logout, history) : sessionLinks()
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
-
-export default Greeting;
+export default withRouter(Greeting);
