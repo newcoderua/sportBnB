@@ -1,7 +1,20 @@
 class Api::BuddiesController < ApplicationController
   def index
-    # debugger
-    @buddies = Buddy.all
+    buddies =  Buddy.all
+    if params[:sport] && params[:sport].to_i != 0
+      buddies = buddies.where(sport: params[:sport].to_i)
+    end
+    if params[:minRate]
+      buddies = buddies.where("rate >= ?", params[:minRate].to_i)
+    end
+    if params[:maxRate]
+      buddies = buddies.where("rate <= ?", params[:maxRate].to_i)
+    end
+    if params[:zip] && params[:zip].to_i != 0
+      buddies = buddies.where(zip: params[:zip].to_i)
+    end
+    @buddies = buddies
+
     render :index
   end
 

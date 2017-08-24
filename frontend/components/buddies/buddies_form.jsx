@@ -9,6 +9,7 @@ class BuddiesForm extends React.Component {
   }
 
   componentDidMount() {
+    // debugger
     this.props.fetchBuddies();
   }
 
