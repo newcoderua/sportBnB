@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
 import { updateFilter } from '../../actions/filter_actions';
-import { pickAllBuddies } from '../../reducers/selectors';
+// import { pickAllBuddies } from '../../reducers/selectors';
 
-import Search from './search_form';
+import SearchForm from './search_form';
 
 const mapStateToProps = state => {
+  // debugger
   return ({
-    buddies: pickAllBuddies(state),
+    buddies: Object.keys(state.buddies),
     sport: state.filters.sport,
     minRate: state.filters.minRate,
     maxRate: state.filters.maxRate,
@@ -23,4 +24,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search);
+)(SearchForm);

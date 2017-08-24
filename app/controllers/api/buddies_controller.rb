@@ -38,6 +38,6 @@ class Api::BuddiesController < ApplicationController
   private
 
   def buddy_params
-    params.require(:buddy).permit(:name, :sport, :best_achievement)
+    params.require(:buddy).permit(:name, :sport, :best_achievement, :zip)
   end
 end
