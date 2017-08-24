@@ -19,7 +19,7 @@ body {
 }
 .header-nav-class {
   background-color: #F5F3EE;
-  opacity: 0.8;
+  opacity: 0.9;
   display: flex;
   justify-content: space-between;
   height: 150px;
@@ -71,7 +71,7 @@ body {
   border: 2px solid #F5F3EE;
   padding: 5px;
   margin: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .login-form > label {
@@ -104,4 +104,20 @@ body {
   	font-variant: normal;
   	font-weight: 500;
   	line-height: 15.4px;
+  }
+
+  #overlay {
+       position: absolute;
+       background: rgba(0, 0, 0, 0.6);
+       left: 0px;
+       top: 0px;
+       width:100%;
+       height:100%;
+       text-align:center;
+       z-index: 1;
+  }
+
+  #overlay div {
+       width:360px;
+       margin: 5% auto;
   }
