@@ -24,21 +24,26 @@ class MainPage extends React.Component {
     return(
       <div id="whole-main-page">
       <div className="text-main-page">
-        <div className="inner-text-main-page">
-            SportBnB &nbsp;
-            stands for Sport BODY
-          and BUDDY
-          Do you like SPORT? Do you want
-          a great BODY?
-          But working out alone is boring?
-          <br/>
-          <br/>
-          We can find you a BUDDY(professional coach).
-          <br/>
-          <br/>
+        <div className="head-text-main-page">
+            SportB(ody)nB(uddy) <br/>
+          Do you like SPORT? Do you want a great BODY?
+        </div>
+        <div className="homepage-subtitle">
+         We can find you a Buddy(professional coach).
           Just pick sport that you interested in, date, time and location...
+        </div>
           <br />
           <br />
+          <div className="pick-sport-buttons">
+            <div className="inner-pick-sport-buttons">
+              <Link to="/buddies/soccer" className="button yahoo">Soccer</Link>
+              <Link to="/buddies" className="button main">Basketball</Link>
+              <Link to="/buddies" className="button main">Box</Link>
+              <Link to="/buddies" className="button main">American football</Link>
+              <Link to="/buddies" className="button main">Running</Link>
+              <Link to="/buddies" className="button main">Volleyball</Link>
+            </div>
+          </div>
           <div className="outer-dropdown">
             <div className="dropdown">
               <button className="dropbtn">Looking for another sport ?</button>
@@ -48,7 +53,6 @@ class MainPage extends React.Component {
                 <a href="#">Baseball</a>
               </div>
             </div>
-          </div>
           </div>
       </div>
       </div>

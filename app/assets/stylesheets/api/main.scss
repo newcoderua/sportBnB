@@ -5,31 +5,51 @@
   align-items: center;
   height: 640px;
   width: 100%;
+  border-radius: 2px;
 }
 
 .text-main-page {
-  // width: 100%;
-  // height: 114px;
-  // display: flex;
-  // justify-content: center;
+  width: 90%;
+  height: 440px;
 }
 
-.inner-text-main-page {
-  // display: flex;
-  // justify-content: center;
-  // font-size: 18px;
-  // border-radius: 5px;
-  // width: 540px;
-  // height: 250px;
-  // border-radius: 5px;
-  // opacity: 0.8;
-  // background-color: #5f396a;
-  // opacity: 0.4;
-  // font-style: italic;
-  // padding: 5px;
-  // margin: 5px;
+.head-text-main-page {
+  width: 100%;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
 }
 
+.homepage-subtitle {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
 .inner-text-main-page {
   color: white
+}
+
+.pick-sport-buttons {
+  height: 128px;
+  // width: 71%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-pick-sport-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 120px;
 }

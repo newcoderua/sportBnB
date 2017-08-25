@@ -5,22 +5,16 @@
 body, html {
   margin: 0px;
   padding: 0px;
-  // background-image: image-url('back1.png');
   font-family: sans-serif;
+
 }
 
 #logo-image {
-  width: 90%;
-  height: 90%;
+  width: 90px;
+  height: 100%;
 }
-.header-nav-class {
-  background-color: #F5F3EE;
-  opacity: 0.9;
-  display: flex;
-  justify-content: space-between;
-  height: 69px;
-  border-radius: 10px;
-}
+
+
 
 .login-signup {
   display: flex;

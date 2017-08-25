@@ -20,19 +20,23 @@ const App = () => (
   <div>
     <header  className="header-class">
         <nav className="header-nav-class">
-          <NavLink to="/" className="header-link">
-            <img src={ window.staticImages.sportBnB }
-              alt="logo"
-              id="logo-image"
-              />
-          </NavLink>
-          <GreetingContainer />
+          <div className="header-logo-class"><NavLink to="/" className="header-link">
+              <img src={ window.staticImages.sportBnB }
+                alt="logo"
+                id="logo-image"
+                />
+            </NavLink>
+          </div>
+          <div className="header-buttons-class">
+            <GreetingContainer />
+          </div>
         </nav>
     </header>
       <Switch className="switch-class">
-        <Route path="/buddies" component={SearchFormContainer} />
+        <Route exact path="/buddies" component={SearchFormContainer} />
         <Route path="/login" component={SessionFormContainer} />
         <Route path="/signup" component={SessionFormContainer} />
+        <Route exact path="/buddies/:sport" component={SearchFormContainer} />
         <MainPageContainer />
       </Switch>
   </div>

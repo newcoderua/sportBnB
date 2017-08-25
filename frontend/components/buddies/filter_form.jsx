@@ -7,21 +7,21 @@ const handleChange = (filter, updateFilter) => {
 
 }
 
-const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => (
+const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => {
+  const sports  = ["any", "soccer", "box", "american football", "running", "volleyball"]
+  let sportsOptions = sports.map( (sportOption) => {
+    if (sport === sportOption) {
+      return (<option key={sportOption} selected value={sportOption}>{sportOption}</option>);
+    } else {
+      return (<option key={sportOption} value={sportOption}>{sportOption}</option>);
+    }
+  })
+  return (
   <div className="filter-box">
       <div className="row">
         <h3>Sport</h3>
         <select className="" onChange={handleChange('sport', updateFilter)}>
-          <option value="any">any</option>
-          <option value="soccer">soccer</option>
-          <option value="box">box</option>
-          <option value="american football">american football</option>
-          <option value="runnig">runnig</option>
-          <option value="volleyball">volleyball</option>
-          <option value="crossfit">crossfit</option>
-          <option value="swimming">swimming</option>
-          <option value="golf">golf</option>
-          <option value="ping pong">ping pong</option>
+          {sportsOptions}
         </select>
       </div>
       <div className="row">
@@ -54,6 +54,17 @@ const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => (
         </select>
       </div>
   </div>
-)
+)}
 
 export default FilterForm;
+
+// <option value="any">any</option>
+// <option value="soccer">soccer</option>
+// <option value="box">box</option>
+// <option value="american football">american football</option>
+// <option value="runnig">runnig</option>
+// <option value="volleyball">volleyball</option>
+// <option value="crossfit">crossfit</option>
+// <option value="swimming">swimming</option>
+// <option value="golf">golf</option>
+// <option value="ping pong">ping pong</option>
