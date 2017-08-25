@@ -10,7 +10,7 @@ const BuddiesReducer = (state = {}, action) => {
     //   const buddy = action.buddy;
     //   return merge({}, state, {[buddy.id]: buddy});
     case RECEIVE_BUDDIES:
-      nextState = {};
+      // nextState = {};
       return action.buddies
     default:
       return state;

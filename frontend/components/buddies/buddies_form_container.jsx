@@ -6,13 +6,15 @@ import BuddiesForm from './buddies_form';
 
 const mapStateToProps = (state) => {
   // debugger
+  // so I need add selector when I can filter my buddies
   return {
   currentUser: state.session.currentUser,
-  buddies: state.buddies
+  buddies: state.buddies,
+  filters: state.filters,
 }};
 
 const mapDispatchToProps = dispatch => ({
-  fetchBuddies: () => dispatch(fetchBuddies()),
+  fetchBuddies: (filters) => dispatch(fetchBuddies(filters)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BuddiesForm);

@@ -14,6 +14,12 @@ class BuddiesForm extends React.Component {
     this.props.fetchBuddies();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.filters !== nextProps.filters) {
+      this.props.fetchBuddies(nextProps.filters)
+    }
+  }
+
   render() {
     // debugger
     if (this.props.currentUser === null) {
@@ -21,16 +27,18 @@ class BuddiesForm extends React.Component {
         <Redirect to="/login" />
       )
     }
-
+// debugger
     return (
       <div  className="outer-buddies-index-main">
-        <SearchFormContainer />
 
         <div className="buddies-index-main">
           <section className="buddies-index">
             <ul className="index-ul">
               {Object.keys(this.props.buddies).map( id => {
-                return <BuddyIndexItem key={id} buddy={this.props.buddies[id]} />;
+                return <BuddyIndexItem
+                      key={id}
+                      buddy={this.props.buddies[id]}
+                      filters={this.props.filters} />;
               })}
             </ul>
           </section>

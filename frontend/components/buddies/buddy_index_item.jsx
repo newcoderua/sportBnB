@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, hashHistory, withRouter } from 'react-router-dom';
 
-export const BuddyIndexItem = ({ buddy }) => {
+export const BuddyIndexItem = ({ buddy, filters }) => {
 // debugger
   return (
     <div className="outer-index-item">

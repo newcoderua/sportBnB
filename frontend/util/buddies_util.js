@@ -1,7 +1,8 @@
-export const fetchBuddies = () => {
+export const fetchBuddies = (filters) => {
   // debugger
   return  $.ajax({
     method: 'GET',
-    url: '/api/buddies'
+    url: '/api/buddies',
+    data: { filters }
   })
 };

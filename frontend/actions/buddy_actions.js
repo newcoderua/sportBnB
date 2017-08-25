@@ -7,8 +7,8 @@ export const receiveAllBuddies = (buddies) => ({
   buddies
 });
 
-export const fetchBuddies = () => dispatch => (
-  BuddyAPIUtil.fetchBuddies()
+export const fetchBuddies = (filters) => dispatch => (
+  BuddyAPIUtil.fetchBuddies(filters)
     .then((buddies) => (
       dispatch(receiveAllBuddies(buddies))
     ))

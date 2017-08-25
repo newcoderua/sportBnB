@@ -14,6 +14,7 @@ import SessionFormContainer from './session_form/session_form_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainPageContainer from './main_page/main_page_container';
 import BuddiesFormContainer from './buddies/buddies_form_container';
+import SearchFormContainer from './buddies/search_form_container';
 
 const App = () => (
   <div>
@@ -29,7 +30,7 @@ const App = () => (
         </nav>
     </header>
       <Switch className="switch-class">
-        <Route path="/buddies" component={BuddiesFormContainer} />
+        <Route path="/buddies" component={SearchFormContainer} />
         <Route path="/login" component={SessionFormContainer} />
         <Route path="/signup" component={SessionFormContainer} />
         <MainPageContainer />

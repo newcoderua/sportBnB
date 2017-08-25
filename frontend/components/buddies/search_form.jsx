@@ -1,9 +1,9 @@
 import React from 'react';
 import FilterForm from './filter_form';
-import BuddiesForm from './buddies_form';
+import BuddiesFormContainer from './buddies_form_container';
 
 const SearchForm = ({buddies, sport, minRate, maxRate, zip, updateFilter }) => {
-
+  // debugger
   return (
     <div className="contents-flex">
       <FilterForm
@@ -13,6 +13,7 @@ const SearchForm = ({buddies, sport, minRate, maxRate, zip, updateFilter }) => {
         zip={zip}
         updateFilter={updateFilter}
         />
+      <BuddiesFormContainer />
     </div>
   );
 }
