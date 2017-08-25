@@ -30,18 +30,20 @@ class MainPage extends React.Component {
         </div>
         <div className="homepage-subtitle">
          We can find you a Buddy(professional coach).
-          Just pick sport that you interested in, date, time and location...
+          Just pick sport that you interested in, date and location...
         </div>
           <br />
           <br />
           <div className="pick-sport-buttons">
-            <div className="inner-pick-sport-buttons">
-              <Link to="/buddies/soccer" className="button yahoo">Soccer</Link>
-              <Link to="/buddies" className="button main">Basketball</Link>
-              <Link to="/buddies" className="button main">Box</Link>
-              <Link to="/buddies" className="button main">American football</Link>
-              <Link to="/buddies" className="button main">Running</Link>
-              <Link to="/buddies" className="button main">Volleyball</Link>
+            <div className="class-for-centering">
+              <div className="inner-pick-sport-buttons">
+                <Link to="/buddies/soccer" className="button main">Soccer</Link>
+                <Link to="/buddies/basketball" className="button main">Basketball</Link>
+                <Link to="/buddies/box" className="button main">Box</Link>
+                <Link to="/buddies/running" className="button main">Running</Link>
+                <Link to="/buddies/volleyball" className="button main">Volleyball</Link>
+                <Link to="/buddies/crossfit" className="button main">Crossfit</Link>
+              </div>
             </div>
           </div>
           <div className="outer-dropdown">

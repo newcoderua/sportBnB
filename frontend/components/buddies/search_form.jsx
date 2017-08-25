@@ -12,7 +12,7 @@ class SearchForm extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     if (this.props.match.params.sport) {
       this.setState({sport: this.props.match.params.sport})
       // debugger

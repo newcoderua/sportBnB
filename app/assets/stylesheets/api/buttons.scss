@@ -37,3 +37,41 @@ a.button.yahoo:active, .button.yahoo:active, .index-item-button {
   max-height: 35px;
   font-size: 70%;
 }
+ // main page buttons
+.button.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4b2a55;
+  border: 1px white;
+  box-shadow: inset 0 0 0 1px #9c83a1;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  width: 190px;
+  height: 24px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+.button.main:hover {
+    background: white;
+    border: 1px #4b2a55;
+    border-bottom: 3px #4d2955;
+    color: #5f396a;
+  }
+
+.button.main:active {
+  background: #5f396a;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5f396a), to(#be95b7));
+  background: -moz-linear-gradient(#5f396a, #be95b7);
+  background: linear-gradient(#5f396a, #be95b7);
+  border: solid 1px #4b2a55;
+  box-shadow: inset 0 10px 15px 0 #4d2955;
+}
+
+.dropbtn {
+  width: 80%;
+}
