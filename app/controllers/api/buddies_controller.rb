@@ -18,8 +18,9 @@ class Api::BuddiesController < ApplicationController
         buddies = buddies.where("rate < ?", filters[:maxRate].to_i)
       end
 
-      if filters[:zip] && filters[:zip].to_i != 0
-        buddies = buddies.where(zip: params[:zip].to_i)
+      # debugger
+      if filters[:zip] == "10001" || filters[:zip] == "94016"
+        buddies = buddies.where(zip: filters[:zip].to_i)
       end
 
     end
@@ -31,19 +32,6 @@ class Api::BuddiesController < ApplicationController
   def show
     @chef = Buddy.find(params[:id])
   end
-
-  # def search
-  #   if params[:query].present?
-  #     @buddies = Buddy.where('username ~ ?', params[:query])
-  #   else
-  #     @buddies = Buddy.none
-  #   end
-  #
-  #   respond_to do |format|
-  #     format.html { render :search }
-  #     format.json { render :search }
-  #   end
-  # end
 
   private
 

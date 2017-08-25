@@ -28,12 +28,8 @@ class MainPage extends React.Component {
             SportBnB &nbsp;
             stands for Sport BODY
           and BUDDY
-        <br/>
-        <br/>
           Do you like SPORT? Do you want
           a great BODY?
-          <br/>
-          <br/>
           But working out alone is boring?
           <br/>
           <br/>
@@ -43,17 +39,17 @@ class MainPage extends React.Component {
           Just pick sport that you interested in, date, time and location...
           <br />
           <br />
+          <div className="outer-dropdown">
+            <div className="dropdown">
+              <button className="dropbtn">Looking for another sport ?</button>
+              <div className="dropdown-content">
+                <a href="http://www.realmadrid.com/en">Soccer</a>
+                <a href="#">Basketball</a>
+                <a href="#">Baseball</a>
+              </div>
+            </div>
           </div>
-      </div>
-      <div className="outer-dropdown">
-        <div className="dropdown">
-          <button className="dropbtn">Looking for another sport ?</button>
-          <div className="dropdown-content">
-            <a href="http://www.realmadrid.com/en">Soccer</a>
-            <a href="#">Basketball</a>
-            <a href="#">Baseball</a>
           </div>
-        </div>
       </div>
       </div>
     );
