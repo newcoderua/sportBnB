@@ -81,6 +81,7 @@ class SessionForm extends React.Component {
       <div id="overlay">
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
+            <img src={ window.staticImages.sportBnB } className="logo-modalpage"/>
             <br/>
           <div className="login-form">
             <NavLink to="/" id="close-modal" className="button yahoo">✖️</NavLink>

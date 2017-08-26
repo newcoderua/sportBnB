@@ -20,7 +20,7 @@ buddy2 = Buddy.create!(
 )
 buddy3 = Buddy.create!(
   name: "Bolt",
-  sport: "runnig",
+  sport: "running",
   rate: 621,
   image_url: "https://s-media-cache-ak0.pinimg.com/736x/e0/ba/f4/e0baf44224f49180bb68313aa0957bd6--olympic-icons-fastest-man.jpg",
   best_achievement: "I am faster than a rocket",
@@ -84,7 +84,7 @@ buddy6 = Buddy.create!(
 )
 buddy6 = Buddy.create!(
   name: "PingPonger",
-  sport: "ping pong",
+  sport: "pingpong",
   rate: 89,
   image_url: "https://www.getgamesgo.com/wp-content/uploads/2016/12/Ping-Pong-Tables.jpg",
   best_achievement: "I play better than Forest Gump",
@@ -93,7 +93,7 @@ buddy6 = Buddy.create!(
 
 buddy6 = Buddy.create!(
   name: "Usain Bolt",
-  sport: "runnig",
+  sport: "running",
   rate: 321,
   image_url: "http://www.konbini.com/us/files/2017/06/usainbetter.jpg",
   best_achievement: "I am an olympic champion",

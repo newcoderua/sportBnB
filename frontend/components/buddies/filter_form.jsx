@@ -1,6 +1,7 @@
 import React from 'react';
 
 const handleChange = (filter, updateFilter) => {
+  // debugger
   return (
     e => updateFilter(filter, e.currentTarget.value)
   );
@@ -8,10 +9,11 @@ const handleChange = (filter, updateFilter) => {
 }
 
 const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => {
-  const sports  = ["any", "soccer", "box", "american football", "running", "volleyball"]
+  const sports  = ["any", "swimming", "soccer", "basketball", "box", "running", "volleyball", "crossfit", "golf", "pingpong"]
   let sportsOptions = sports.map( (sportOption) => {
     if (sport === sportOption) {
-      return (<option key={sportOption} selected value={sportOption}>{sportOption}</option>);
+      // debugger
+      return (<option key={sportOption}  selected value={sportOption}>{sportOption}</option>);
     } else {
       return (<option key={sportOption} value={sportOption}>{sportOption}</option>);
     }
@@ -32,7 +34,6 @@ const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => {
           <option value="100">$100</option>
           <option value="300">$300</option>
           <option value="500">$500</option>
-          <option value="volleyball">volleyball</option>
         </select>
       </div>
       <div className="row">

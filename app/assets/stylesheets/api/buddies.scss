@@ -4,18 +4,21 @@
 
 .buddies-index-main {
   width: 100%;
-  height: 600px;
+  height: 100%;
 }
 
 .buddies-index {
-  background-image: image-url('test.png');
-  background-size:100%;
-  font-family: sans-serif;
+  // background-image: image-url('test.png');
+  // background-size:100%;
+  // font-family: sans-serif;
   width: 100%;
-  height: inherit;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  min-height: 640px;
+  // background-repeat: no-repeat;
+  // background-position: 0 0;
   background-size: cover;
+  background-image: image-url('test.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .index-buddy-pic {

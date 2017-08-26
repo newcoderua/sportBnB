@@ -1,4 +1,13 @@
 .filter-box {
   display: flex;
   justify-content: space-around;
+  border: 1px solid #F5F3EE;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 4px;
+  color: #5f396a;
+}
+
+.row {
+  font-size: 16px;
 }

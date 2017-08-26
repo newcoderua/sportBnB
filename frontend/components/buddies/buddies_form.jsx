@@ -15,6 +15,7 @@ class BuddiesForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    // debugger
     if (this.props.filters !== nextProps.filters) {
       this.props.fetchBuddies(nextProps.filters)
     }

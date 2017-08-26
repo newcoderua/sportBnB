@@ -3,11 +3,11 @@ import { Link, withRouter } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
-    <Link to="/buddies" className="button yahoo">Our Buddies</Link>
+    <Link to="/buddies" className="button yahoo">Buddies</Link>
     &nbsp;&nbsp;
     <Link to="/login" className="button yahoo">Login</Link>
     &nbsp;&nbsp;
-    <Link to="/signup" className="button yahoo">Sign up!</Link>
+    <Link to="/signup" className="button yahoo">SignUp</Link>
   </nav>
 );
 
@@ -20,7 +20,7 @@ const personalGreeting = (currentUser, logout, history) => {
   return (
 
     <hgroup className="header-group">
-      <Link to="/buddies" className="button yahoo">Our Buddies</Link>
+      <Link to="/buddies" className="button yahoo">Buddies</Link>
       &nbsp;&nbsp;
       <button className="button yahoo" onClick={handleLogOut}>Log Out</button>
     </hgroup>

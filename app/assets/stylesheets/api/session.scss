@@ -10,8 +10,8 @@ body, html {
 }
 
 #logo-image {
-  width: 90px;
-  height: 110px;
+  width: 35%;
+  height: 35%;
 }
 
 
@@ -23,8 +23,6 @@ body, html {
   align-items: center;
 
 }
-
-
 
 #login-link, #signup-link {
   color: black;
@@ -96,17 +94,24 @@ body, html {
   }
 
   #overlay {
-       position: absolute;
-       background: rgba(0, 0, 0, 0.6);
-       left: 0px;
-       top: 0px;
-       width:100%;
-       height:100%;
-       text-align:center;
-       z-index: 1;
+   position: absolute;
+    background-image: image-url('modal-image.png');
+   left: 0px;
+   top: 0px;
+   width:100%;
+   height:100%;
+   text-align:center;
+   z-index: 1;
+   background-size:100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
   }
 
   #overlay div {
-       width:360px;
-       margin: 5% auto;
+     width:360px;
+     margin: 5% auto;
+  }
+
+  .logo-modalpage {
+    width: 70%;
   }

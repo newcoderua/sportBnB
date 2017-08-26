@@ -13,9 +13,10 @@ class SearchForm extends React.Component {
 
   componentDidMount() {
     // debugger
-    if (this.props.match.params.sport) {
-      this.setState({sport: this.props.match.params.sport})
+    if (this.props.match.params.sport)  {
       // debugger
+
+      this.setState({sport: this.props.match.params.sport})
 
       this.props.updateFilter('sport', this.props.match.params.sport)
     }

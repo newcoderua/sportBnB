@@ -5,7 +5,7 @@ class Api::BuddiesController < ApplicationController
     if params[:filters]
 
       filters = params[:filters]
-
+      # debugger
       if filters[:sport] != "0" && filters[:sport] != "any"
         buddies = buddies.where(sport: filters[:sport])
       end
