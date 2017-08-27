@@ -16,6 +16,8 @@ import MainPageContainer from './main_page/main_page_container';
 import BuddiesFormContainer from './buddies/buddies_form_container';
 import SearchFormContainer from './buddies/search_form_container';
 import AccountFormContainer from './user/account_form_container';
+import WorkoutContainer from './workout/workout_form_container';
+
 
 const App = () => (
   // <Provider>
@@ -42,7 +44,7 @@ const App = () => (
             <Route path="/signup" component={SessionFormContainer} />
             <Route exact path="/buddies/:sport" component={SearchFormContainer} />
             <Route path="/users/:account" component={AccountFormContainer} />
-            <Route path="/users/:workout" component={SessionFormContainer} />
+            <Route path="/workouts" component={WorkoutContainer} />
             <MainPageContainer />
           </Switch>
       </div>

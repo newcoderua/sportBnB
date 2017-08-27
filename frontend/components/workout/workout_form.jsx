@@ -10,9 +10,10 @@ import {
 
 // import SearchForm '../search_form/search_form_container';
 
-class AccountForm extends React.Component {
+class WorkoutForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       username: props.currentUser.username,
       email: props.currentUser.email,
@@ -37,4 +38,4 @@ class AccountForm extends React.Component {
   }
 }
 
-export default AccountForm;
+export default WorkoutForm;
