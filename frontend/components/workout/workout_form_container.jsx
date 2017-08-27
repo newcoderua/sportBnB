@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import WorkoutForm from './workout_form';
-import { deleteWorkout, receiveWorkouts, createWorkout } from '../../actions/workout_actions';
+import { deleteWorkout, fetchWorkouts, createWorkout } from '../../actions/workout_actions';
 
 const mapStateToProps = (state) => {
   // debugger

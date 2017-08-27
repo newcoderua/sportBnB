@@ -20,9 +20,11 @@ class Api::WorkoutsController < ApplicationController
   end
 
   def destroy
+    debugger
     workout = Workout.find(params[:id])
     if workout
       workout.destroy
+      # render :index
     else
       render json: { message: "Invalid reservation", status: 404 }
     end

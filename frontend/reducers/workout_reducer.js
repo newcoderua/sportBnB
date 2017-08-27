@@ -1,20 +1,27 @@
 import { merge } from 'lodash';
 
-import {  RECEIVE_BUDDIES } from '../actions/workout_actions';
+import {  FETCH_WORKOUTS, DELETE_WORKOUT, CREATE_WORKOUT } from '../actions/workout_actions';
 
-const BuddiesReducer = (state = {}, action) => {
+const WorkoutReducer = (state = {}, action) => {
   Object.freeze(state);
-  let nextState;
   switch(action.type){
-    // case RECEIVE_BUDDY:
-    //   const buddy = action.buddy;
-    //   return merge({}, state, {[buddy.id]: buddy});
-    case RECEIVE_BUDDIES:
-      // nextState = {};
-      return action.buddies
+
+    case CREATE_WORKOUT:
+      const new_workout = { [action.workout.id]: action.workout };
+      return merge({}, state, new_workout);
+
+    case FETCH_WORKOUTS:
+      // debugger
+      return action.workouts;
+
+    case DELETE_WORKOUT:
+      let newState = merge({}, state);
+      delete newState[action.workout.id];
+      return newState;
+
     default:
       return state;
   }
 }
 
-export default BuddiesReducer;
+export default WorkoutReducer;

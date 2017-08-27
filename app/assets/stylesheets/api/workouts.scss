@@ -1,3 +1,58 @@
 // Place all the styles related to the api/workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.outer-main-profile-page {
+  border: 1px solid lightgrey;
+  background-color: #f2efef;
+}
+
+.header-account {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+
+}
+
+.main-profile-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  min-height: 640px;
+}
+
+.container-profile {
+  display: flex;
+  justify-content: start;
+  width: 80%;
+}
+.workouts-class {
+  list-style: none;
+}
+
+.profile-navigation-links {
+  width: 35%;
+  padding: 10px;
+  // margin: 10px;
+  border: 1px solid #9c83a1;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.profile-navigation-links a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.profile-navigation-content {
+  width: 65%;
+  border: 1px solid #9c83a1;
+  padding: 10px;
+  // margin: 10px;
+  border: 1px solid #9c83a1;
+  border-left: none;
+  border-radius: 3px;
+  font-size: 20px;
+}

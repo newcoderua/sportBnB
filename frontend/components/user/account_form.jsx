@@ -23,15 +23,30 @@ class AccountForm extends React.Component {
     // debugger
     // debugger
     return(
-      <div>
-        <h1>Your profile page</h1><br/>
+      <div className="outer-main-profile-page">
+        <div className="header-account">
+          <div>
+            <h1>Your Account</h1>
+          </div>
+        </div>
 
-        {this.state.username}<br/>
-        {this.state.email}
-        <br />
-        <br />
-        <br />
-        <Link to="/workouts" className="button yahoo">Create you desirable workout</Link>
+      <div className="main-profile-page">
+        <div className="container-profile">
+
+          <div className="profile-navigation-links">
+            <Link to="/users/account">Profile</Link><br/><br/><br/>
+            <Link to="/workouts">Workouts</Link><br/><br/>
+          </div>
+          <div className="profile-navigation-content">
+          <div>
+            <h3>Account</h3>
+              {this.state.username}<br/>
+              {this.state.email}
+            </div>
+          </div>
+
+        </div>
+      </div>
       </div>
     );
   }

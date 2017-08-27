@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 user_demo = User.create({username: "Albert_Einstein", email: "Albi@yahoo.com", password: "654321"})
+user1 = User.create!({username: "vlados", email: "vlados@gmail.com", password: "password"})
+user2 = User.create!({username: "Teddy", email: "teddy@gmail.com", password: "password"})
 
 Buddy.destroy_all
 
@@ -98,4 +100,38 @@ buddy6 = Buddy.create!(
   image_url: "http://www.konbini.com/us/files/2017/06/usainbetter.jpg",
   best_achievement: "I am an olympic champion",
   zip: 94016
+)
+
+Workout.destroy_all
+
+workout1 = Workout.create!(
+    user_id: User.all.find_by_username("Albert_Einstein").id,
+    address: "36 w 13 steet",
+    sport: "volleyball",
+    date: "2014-01-01",
+    details: "this is first workout"
+)
+
+workout2 = Workout.create!(
+    user_id: User.all.find_by_username(user2.username).id,
+    address: "36 w 13 steet",
+    sport: "volleyball",
+    date: "2014-01-01",
+    details: "this is the second workout"
+)
+
+workout3 = Workout.create!(
+    user_id: User.all.find_by_username(user1.username).id,
+    address: "36 w 13 steet",
+    sport: "volleyball",
+    date: "2014-01-01",
+    details: "this is third"
+)
+
+workout4 = Workout.create!(
+    user_id: User.all.find_by_username(user1.username).id,
+    address: "36 w 13 steet",
+    sport: "volleyball",
+    date: "2014-01-01",
+    details: "Forth"
 )

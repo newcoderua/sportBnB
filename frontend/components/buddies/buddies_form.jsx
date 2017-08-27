@@ -7,6 +7,7 @@ import SearchFormContainer from './search_form_container';
 class BuddiesForm extends React.Component {
   constructor(props) {
     super(props);
+    // debugger
   }
 
   componentDidMount() {
