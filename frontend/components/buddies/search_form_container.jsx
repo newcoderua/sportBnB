@@ -20,7 +20,6 @@ const mapDispatchToProps = dispatch => {
   // debugger
   return {
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
-    resetBuddies: (filters) => dispatch(fetchBuddies(filters))
   };
 }
 

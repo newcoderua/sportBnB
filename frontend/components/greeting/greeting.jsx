@@ -22,6 +22,8 @@ const personalGreeting = (currentUser, logout, history) => {
     <hgroup className="header-group">
       <Link to="/buddies" className="button yahoo">Buddies</Link>
       &nbsp;&nbsp;
+      <Link to="/users/account" className="button yahoo">Account</Link>
+        &nbsp;&nbsp;
       <button className="button yahoo" onClick={handleLogOut}>Log Out</button>
     </hgroup>
   )

@@ -8,11 +8,13 @@ const handleChange = (filter, updateFilter) => {
 
 }
 
-const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter}) => {
+const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter }) => {
   const sports  = ["any", "swimming", "soccer", "basketball", "box", "running", "volleyball", "crossfit", "golf", "pingpong"]
+  // debugger
   let sportsOptions = sports.map( (sportOption) => {
-    if (sport === sportOption) {
-      // debugger
+    if ((sport === sportOption)) {
+      return (<option key={sportOption}  selected value={sportOption}>{sportOption}</option>);
+    } else if (sport === sportOption) {
       return (<option key={sportOption}  selected value={sportOption}>{sportOption}</option>);
     } else {
       return (<option key={sportOption} value={sportOption}>{sportOption}</option>);

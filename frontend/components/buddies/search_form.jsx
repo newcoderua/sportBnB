@@ -6,9 +6,9 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
+    // debugger
     const sport = this.props.sport;
     this.state = { sport }
-    // debugger
   }
 
   componentDidMount() {
@@ -23,6 +23,7 @@ class SearchForm extends React.Component {
   }
 
   render() {
+    // debugger
   return (
     <div className="contents-flex">
       <FilterForm
