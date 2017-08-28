@@ -8,13 +8,15 @@ import {
   HashRouter
 } from 'react-router-dom';
 import WorkoutItem from './workout_item';
-import NewWorkoutForm from './new_workout_form';
+import NewWorkoutFormContainer from './new_workout_form_container';
 
 
 class WorkoutForm extends React.Component {
   constructor(props) {
     super(props);
+    // debugger
     this.state = { formVisible: false };
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
@@ -22,8 +24,12 @@ class WorkoutForm extends React.Component {
     // debugger
   }
 
-  openNewWorkoutForm() {
+  openNewWorkoutFormContainer() {
     this.setState({ formVisible: true });
+  }
+
+  closeModal() {
+    this.setState({ formVisible: false })
   }
 
   render() {
@@ -56,10 +62,10 @@ class WorkoutForm extends React.Component {
                 <h3>Workouts</h3>
               </div>
               <div>
-                <button className="button yahoo" onClick={this.openNewWorkoutForm.bind(this)}>Post workout</button>
+                <button className="button yahoo" onClick={this.openNewWorkoutFormContainer.bind(this)}>Post workout</button>
               </div>
             </div>
-              {Object.keys(this.props.workouts).map(id => (
+              {Object.keys(this.props.workouts).reverse().map(id => (
                 <WorkoutItem
                   key={id}
                   workout={workouts[id]}
@@ -70,7 +76,7 @@ class WorkoutForm extends React.Component {
         </div>
       </div>
 
-        { this.state.formVisible ? <NewWorkoutForm createWorkout={this.props.createWorkout} /> : null }
+      { this.state.formVisible ? <NewWorkoutFormContainer closeModal={this.closeModal} /> : null }
       </div>
     );
   }

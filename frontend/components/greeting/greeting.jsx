@@ -7,7 +7,7 @@ const sessionLinks = () => (
     &nbsp;&nbsp;
     <Link to="/login" className="button yahoo">Login</Link>
     &nbsp;&nbsp;
-    <Link to="/signup" className="button yahoo">SignUp</Link>
+    
   </nav>
 );
 

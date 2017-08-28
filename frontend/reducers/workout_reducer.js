@@ -15,6 +15,7 @@ const WorkoutReducer = (state = {}, action) => {
       return action.workouts;
 
     case DELETE_WORKOUT:
+    // debugger
       let newState = merge({}, state);
       delete newState[action.workout.id];
       return newState;

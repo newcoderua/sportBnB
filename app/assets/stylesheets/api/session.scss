@@ -102,7 +102,9 @@ body, html {
    height:100%;
    text-align:center;
    z-index: 1;
-   background-size:100%;
+   background-size: cover;
+
+  //  background-size:100%;
    background-repeat: no-repeat;
    background-attachment: fixed;
   }
@@ -114,27 +116,4 @@ body, html {
 
   .logo-modalpage {
     width: 70%;
-  }
-
-
-  #overlay1 {
-   position: absolute;
-   background-color:rgba(0,0,0,0.3);
-   left: 0px;
-   top: 0px;
-   width:100%;
-   height:800px;
-   text-align:center;
-   z-index: 1;
-   background-size:100%;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-  }
-
-  #overlay1 div {
-     width: 80%;
-     height: 80%;
-     margin: 5% auto;
-     border: 1px solid black;
-     background-color: white;
   }

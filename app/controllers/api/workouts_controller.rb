@@ -4,9 +4,9 @@ class Api::WorkoutsController < ApplicationController
     workouts = Workout.all
     if(current_user)
       workouts = workouts.where(user_id: current_user.id)
-      # debugger
     end
-    @workouts = workouts
+    # debugger
+    @workouts = workouts.reverse
   end
 
   def create
@@ -25,11 +25,11 @@ class Api::WorkoutsController < ApplicationController
   end
 
   def destroy
-    debugger
-    workout = Workout.find(params[:id])
-    if workout
-      workout.destroy
-      # render :index
+    # debugger
+    @workout = Workout.find(params[:id])
+    if @workout
+      @workout.destroy
+      render :show
     else
       render json: { message: "Invalid reservation", status: 404 }
     end
@@ -39,6 +39,6 @@ class Api::WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:user_id, :address, :sport, :date, :completed)
+    params.require(:workout).permit(:user_id, :address, :sport, :date, :completed, :details)
   end
 end

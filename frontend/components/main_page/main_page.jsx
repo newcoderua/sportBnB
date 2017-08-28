@@ -57,8 +57,8 @@ class MainPage extends React.Component {
             <div className="dropdown">
               <button className="dropbtn">Looking for another sport ?</button>
               <div className="dropdown-content">
-                <Link to="/buddies/swimming">Swimming</Link>
-                <Link to="/buddies/golf">Golf</Link>
+                <Link to="/buddies/swimming" onClick={this.updateSport("swimming")}>Swimming</Link>
+                <Link to="/buddies/golf" onClick={this.updateSport("swimming")}>Golf</Link>
               </div>
             </div>
           </div>

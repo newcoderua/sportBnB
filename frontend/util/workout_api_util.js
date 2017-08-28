@@ -1,13 +1,15 @@
-export const createWorkout = (workout) => (
-  $.ajax({
+export const createWorkout = (workout) => {
+  workout.date = workout.date.format()
+  // debugger
+  return ($.ajax({
     type: "POST",
     url: "api/workouts",
     data:  {workout},
-  })
-);
+  }));
+};
 
 export const destroyWorkout = (id) => {
-  debugger
+  // debugger
   return ($.ajax({
     method: 'DELETE',
     url: `api/workouts/${id}`,
