@@ -32,8 +32,8 @@
 }
 
 .profile-navigation-links {
-  width: 35%;
-  padding: 10px;
+  width: 25%;
+  // padding: 10px;
   // margin: 10px;
   border: 1px solid #9c83a1;
   border-radius: 3px;
@@ -42,12 +42,12 @@
 
 .profile-navigation-links a {
   text-decoration: none;
-  padding: 10px;
+  // padding: 10px;
   margin: 10px;
 }
 
 .profile-navigation-content {
-  width: 65%;
+  width: 75%;
   border: 1px solid #9c83a1;
   padding: 10px;
   // margin: 10px;
@@ -55,4 +55,9 @@
   border-left: none;
   border-radius: 3px;
   font-size: 20px;
+}
+
+.workouts-class {
+  border-bottom: 1px solid #9c83a1;
+  margin: 10px; 
 }

@@ -1,3 +1,61 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.selected-profile-link {
+  background-color: #e8e5e8;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 4px solid#82329a;
+}
+
+.not-selected-profile-link {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-profile-header {
+  border-bottom: 1px solid #e8e5e8;
+}
+
+.profile-navigation-content-info {
+  display: flex;
+  justify-content: space-around;
+  height: 90%;
+  margin-top: 15px;
+}
+
+.profile-pic-class {
+  width: 50%;
+}
+#profile-pic {
+  background-size:100%;
+  min-width: 80px;
+  min-height: 130px;
+  max-width: 195px;
+  max-height: 216px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 90%;
+  height: 80%;
+  border-radius: 50px;
+}
+
+.name-email-info-class {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.header-workout-content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  
+}

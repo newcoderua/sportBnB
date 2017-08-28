@@ -1,6 +1,7 @@
 class Api::WorkoutsController < ApplicationController
 
   def index
+
     @workouts = Workout.all
   end
 
@@ -28,6 +29,7 @@ class Api::WorkoutsController < ApplicationController
     else
       render json: { message: "Invalid reservation", status: 404 }
     end
+
   end
 
   private

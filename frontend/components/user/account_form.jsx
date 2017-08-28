@@ -13,15 +13,15 @@ import {
 class AccountForm extends React.Component {
   constructor(props) {
     super(props);
+    // debugger
     this.state = {
       username: props.currentUser.username,
       email: props.currentUser.email,
+      id: props.currentUser.id,
     }
   }
 
   render() {
-    // debugger
-    // debugger
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
@@ -34,14 +34,32 @@ class AccountForm extends React.Component {
         <div className="container-profile">
 
           <div className="profile-navigation-links">
-            <Link to="/users/account">Profile</Link><br/><br/><br/>
-            <Link to="/workouts">Workouts</Link><br/><br/>
+            <div className="selected-profile-link">
+              <Link to="/users/account">Profile</Link><br/><br/><br/>
+            </div>
+            <div className="not-selected-profile-link">
+              <Link to="/workouts">Workouts</Link><br/><br/>
+            </div>
           </div>
           <div className="profile-navigation-content">
           <div>
-            <h3>Account</h3>
-              {this.state.username}<br/>
-              {this.state.email}
+            <div className="account-profile-header">
+              <h3>Your profile info</h3> your id: {this.state.id}
+            </div>
+              <div>
+                <div className="profile-navigation-content-info">
+                  <div className="profile-pic-class">
+                    <img src={ window.staticImages.profilePic }
+                      alt="profile-pic"
+                      id="profile-pic"
+                      />
+                  </div>
+                  <div className="name-email-info-class">
+                    ☞ &nbsp;{this.state.username}<br/><br/>
+                    ✉︎ &nbsp;{this.state.email}
+                </div>
+                </div>
+              </div>
             </div>
           </div>
 
