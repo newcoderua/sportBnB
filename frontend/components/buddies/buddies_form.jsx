@@ -12,7 +12,8 @@ class BuddiesForm extends React.Component {
 
   componentDidMount() {
     // debugger
-    this.props.fetchBuddies();
+    // this.props.clearFilter();
+    this.props.fetchBuddies(this.props.filters);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -20,6 +21,10 @@ class BuddiesForm extends React.Component {
     if (this.props.filters !== nextProps.filters) {
       this.props.fetchBuddies(nextProps.filters)
     }
+  }
+
+  componentWillUnmount() {
+    this.props.clearFilter();
   }
 
   render() {

@@ -8,16 +8,22 @@ import {
   HashRouter
 } from 'react-router-dom';
 import WorkoutItem from './workout_item';
+import NewWorkoutForm from './new_workout_form';
 
 
 class WorkoutForm extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = { formVisible: false };
   }
 
   componentDidMount() {
     this.props.fetchWorkouts()
+    // debugger
+  }
+
+  openNewWorkoutForm() {
+    this.setState({ formVisible: true });
   }
 
   render() {
@@ -25,6 +31,7 @@ class WorkoutForm extends React.Component {
     if ((Object.keys(this.props).length === 0) || (workouts === undefined)) {
       return null;
     }
+    // debugger
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
@@ -49,7 +56,7 @@ class WorkoutForm extends React.Component {
                 <h3>Workouts</h3>
               </div>
               <div>
-                <button className="button yahoo">Post workout</button>
+                <button className="button yahoo" onClick={this.openNewWorkoutForm.bind(this)}>Post workout</button>
               </div>
             </div>
               {Object.keys(this.props.workouts).map(id => (
@@ -62,6 +69,8 @@ class WorkoutForm extends React.Component {
             </div>
         </div>
       </div>
+
+        { this.state.formVisible ? <NewWorkoutForm createWorkout={this.props.createWorkout} /> : null }
       </div>
     );
   }

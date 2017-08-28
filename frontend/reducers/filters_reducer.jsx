@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { UPDATE_FILTER } from '../actions/filter_actions';
+import { UPDATE_FILTER, CLEAR_FILTER } from '../actions/filter_actions';
 //?? up
 const _defaultFilters = Object.freeze({
   sport: 0,
@@ -17,6 +17,8 @@ const FiltersReducer = (state = _defaultFilters, action) => {
     case UPDATE_FILTER:
       newState = { [action.filter] : action.value };
       return merge({}, state, newState);
+    case CLEAR_FILTER:
+      return _defaultFilters;
     default:
       return state;
   }

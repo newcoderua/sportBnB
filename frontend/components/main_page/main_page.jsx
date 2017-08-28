@@ -22,6 +22,13 @@ class MainPage extends React.Component {
     // debugger
   }
 
+  updateSport(sport) {
+    return () => {
+      // debugger
+      this.props.updateFilter('sport', sport);
+    }
+  }
+
   render() {
     return(
       <div id="whole-main-page">
@@ -38,12 +45,12 @@ class MainPage extends React.Component {
           <br />
           <div className="pick-sport-buttons">
               <div className="inner-pick-sport-buttons">
-                <Link to="/buddies/soccer" className="button main">Soccer</Link>
-                <Link to="/buddies/basketball" className="button main">Basketball</Link>
-                <Link to="/buddies/box" className="button main">Box</Link>
-                <Link to="/buddies/running" className="button main">Running</Link>
-                <Link to="/buddies/volleyball" className="button main">Volleyball</Link>
-                <Link to="/buddies/crossfit" className="button main">Crossfit</Link>
+                <Link to="/buddies/soccer" onClick={this.updateSport("soccer")}className="button main">Soccer</Link>
+                <Link to="/buddies/basketball" onClick={this.updateSport("basketball")}className="button main">Basketball</Link>
+                <Link to="/buddies/box" onClick={this.updateSport("box")}className="button main">Box</Link>
+                <Link to="/buddies/running" onClick={this.updateSport("running")}className="button main">Running</Link>
+                <Link to="/buddies/volleyball" onClick={this.updateSport("volleyball")}className="button main">Volleyball</Link>
+                <Link to="/buddies/crossfit" onClick={this.updateSport("crossfit")}className="button main">Crossfit</Link>
               </div>
           </div>
           <div className="outer-dropdown">

@@ -4,7 +4,7 @@
 
 .outer-main-profile-page {
   border: 1px solid lightgrey;
-  background-color: #f2efef;
+  background-color: #ece7ed;
 }
 
 .header-account {
@@ -26,6 +26,8 @@
   display: flex;
   justify-content: start;
   width: 80%;
+  background-color: #f2efef;
+  // background-color: #ece7ed;
 }
 .workouts-class {
   list-style: none;
@@ -59,5 +61,5 @@
 
 .workouts-class {
   border-bottom: 1px solid #9c83a1;
-  margin: 10px; 
+  margin: 10px;
 }

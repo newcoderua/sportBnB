@@ -1,8 +1,12 @@
 class Api::WorkoutsController < ApplicationController
 
   def index
-
-    @workouts = Workout.all
+    workouts = Workout.all
+    if(current_user)
+      workouts = workouts.where(user_id: current_user.id)
+      # debugger
+    end
+    @workouts = workouts
   end
 
   def create
@@ -35,6 +39,6 @@ class Api::WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:user_id, :address, :sport, :date)
+    params.require(:workout).permit(:user_id, :address, :sport, :date, :completed)
   end
 end

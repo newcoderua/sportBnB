@@ -38,11 +38,11 @@ const App = () => (
             </nav>
         </header>
           <Switch className="switch-class">
-            <Route exact path="/buddies" component={SearchFormContainer} />
 
             <Route path="/login" component={SessionFormContainer} />
             <Route path="/signup" component={SessionFormContainer} />
             <Route exact path="/buddies/:sport" component={SearchFormContainer} />
+            <Route exact path="/buddies" component={SearchFormContainer} />
             <Route path="/users/:account" component={AccountFormContainer} />
             <Route path="/workouts" component={WorkoutContainer} />
             <MainPageContainer />

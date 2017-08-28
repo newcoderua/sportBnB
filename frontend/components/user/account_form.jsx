@@ -44,7 +44,7 @@ class AccountForm extends React.Component {
           <div className="profile-navigation-content">
           <div>
             <div className="account-profile-header">
-              <h3>Your profile info</h3> your id: {this.state.id}
+              <h3>Your profile info</h3>
             </div>
               <div>
                 <div className="profile-navigation-content-info">
