@@ -55,11 +55,20 @@ class WorkoutForm extends React.Component {
             <div className="selected-profile-link">
               <Link to="/workouts">Workouts</Link><br/><br/>
             </div>
+            <div className="not-selected-profile-link">
+              <Link to="/reservations">Reservations</Link><br/><br/>
+            </div>
             </div>
           <div className="profile-navigation-content">
             <div className="header-workout-content">
               <div>
-                <h3>Workouts</h3>
+                <h4>Let's say you want to workout, but</h4><br />
+                - you do not know how to pick buddy<br />
+                - or there are no available buddies for now<br />
+                - or you want some random buddy to workout with you<br />
+                - etc. <br />
+              <h4>You can post workout so our community (everybuddy 🤣) can see your post and can accept your request</h4>
+                <h3> Workout's requests </h3><br />
               </div>
               <div>
                 <button className="button yahoo" onClick={this.openNewWorkoutFormContainer.bind(this)}>Post workout</button>

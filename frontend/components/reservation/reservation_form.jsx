@@ -84,8 +84,8 @@ class ReservationForm extends React.Component {
                       placeholder="159 w 25 street" />
                   </div>
 
+                  <h3>Pick a date</h3>
                     <div className="date-modal">
-                      <h3>Pick a date</h3>
                       <DatePicker id="date-modal-id"
                         selected={this.state.date}
                         onChange={this.changeDate} />

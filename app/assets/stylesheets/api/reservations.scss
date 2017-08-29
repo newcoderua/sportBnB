@@ -1,3 +1,33 @@
 // Place all the styles related to the api/reservations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#li {
+  list-style: none;
+}
+
+.reservations-class {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #4b2a55;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.reservations-header-account {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+#reservation-buddy-pict {
+  max-width: 200px;
+  max-height: 200px;
+  margin-right: 10px;
+}
+
+.reservation-buddy-info-account {
+  margin-left: 10px;
+  min-width: 400px;
+}

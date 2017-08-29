@@ -1,5 +1,5 @@
 @reservations.each do |reservation|
-  json.set! resrvation.id do
-    json.partial! 'resrvation', resrvation: resrvation
+  json.set! reservation.id do
+    json.partial! 'reservation', reservation: reservation
   end
 end

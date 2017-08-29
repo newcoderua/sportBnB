@@ -11,7 +11,7 @@ class Api::ReservationsController < ApplicationController
   end
 
   def create
-    debugger
+    # debugger
     @reservation = Reservation.new(reservation_params)
     @reservation.user_id = current_user.id
     if @reservation.save

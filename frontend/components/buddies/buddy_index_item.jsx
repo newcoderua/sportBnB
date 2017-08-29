@@ -34,7 +34,7 @@ export const BuddyIndexItem = ({ buddy, filters }) => {
                 {buddy.name}
               </Link>
             </div>
-            <div className="index-buddy-rate">${buddy.rate}</div>
+            <div className="index-buddy-rate">${buddy.rate} / hour</div>
           </div>  <br/>
 
           <div className="index-achivement">

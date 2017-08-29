@@ -40,6 +40,9 @@ class AccountForm extends React.Component {
             <div className="not-selected-profile-link">
               <Link to="/workouts">Workouts</Link><br/><br/>
             </div>
+            <div className="not-selected-profile-link">
+              <Link to="/reservations">Reservations</Link><br/><br/>
+            </div>
           </div>
           <div className="profile-navigation-content">
           <div>

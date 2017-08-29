@@ -22,8 +22,8 @@
 }
 
 .index-buddy-pic {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   object-fit: cover;
 }
 
@@ -32,7 +32,7 @@
 .index-buddy-content {
   display: inline-block;
   border-radius: 5px;
-  width: 70%;
+  width: 80%;
   align-items: center;
 }
 
@@ -54,6 +54,7 @@
   background-color: white;
   opacity: 0.9;
   width: 60%;
+  max-width: 666px;
   border-radius: 5px;
   padding: 2px;
   margin: 5px;
@@ -103,6 +104,10 @@
 }
 
 .sport-buddy-item {
-  font-size: 20px;
-  font-family: sans-serif;
+  font-size: 18px;
+  font-family: monospace;
+  border-radius: 3px;
+  color: white;
+  background-color: #906299;
+  padding: 3px;
 }
