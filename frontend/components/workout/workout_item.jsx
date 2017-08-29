@@ -12,12 +12,12 @@ const WorkoutItem = ({ workout, deleteWorkout }) => {
     <div className="workouts-class">
       <li>
 
-        <b>Sport :  </b>{workout.sport} <b> and user_id</b>{workout.user_id}<br />
+        <b>Sport :  </b>{workout.sport}<br />
         <b>Address :  </b>{workout.address}<br />
-         <b>Date :  </b>{workout.date}<br />
+         <b>Date :  </b>{workout.date}<br /><br />
          <b>Details :  </b>{workout.details}<br />
-         <b>Completed : </b>{r}<br />
-        <button onClick={handleDelete}>    Delete   </button><br /><br />
+         <b>Status of request : </b>{r}<br />
+        <button className="button-delete-workouts" onClick={handleDelete}>    Delete   </button><br /><br />
       </li>
     </div>
   );

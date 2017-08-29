@@ -28,6 +28,7 @@
 }
 
 
+
 .index-buddy-content {
   display: inline-block;
   border-radius: 5px;
@@ -61,16 +62,47 @@
 .index-buddy-title-cf {
   display: flex;
   justify-content: space-around;
+  margin: 10px;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
 
 .index-buddy-rate {
   color: black;
 }
 
-.index-achivement {
-  border: 1px solid #be95b7;
+.index-item-button {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  font-size: 13px;
+  max-height: 40px;
+  background: #62406c;
+  border: 1px #4b2a55;
+  box-shadow: inset 0 0 0 1px #9c83a1;
+  color: white;
+  font-weight: 300;
+  padding: 5px;
+  margin: 4px;
   border-radius: 3px;
-  font-weight: bolder;
+  text-decoration: none;
+}
+
+
+.index-achivement {
+  // border: 1px solid #be95b7;
+  // border-radius: 3px;
+  // font-weight: bolder;
   background: white;
   margin: 3px;
+  color: #46183e;
+  font-weight: bolder;
+  font-family: monospace;
+  font-size: 17px;
+}
+
+.sport-buddy-item {
+  font-size: 20px;
+  font-family: sans-serif;
 }

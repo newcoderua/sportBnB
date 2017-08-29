@@ -1,9 +1,9 @@
-a.button.yahoo, .button.yahoo, .index-item-button {
+a.button.yahoo, .button.yahoo, .button-delete-workouts {
     background: white;
     border: 1px #4b2a55;
     box-shadow: inset 0 0 0 1px #9c83a1;
     color: #4b2a55;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     padding: 5px;
     margin: 4px;
@@ -11,7 +11,7 @@ a.button.yahoo, .button.yahoo, .index-item-button {
     text-decoration: none;
 }
 
-a.button.yahoo:hover, .button.yahoo:hover, .index-item-button {
+a.button.yahoo:hover, .button.yahoo:hover, .button-delete-workouts:hover {
     background: #5f396a;
     background: -moz-linear-gradient(#5f396a, #be95b7);
     background: linear-gradient(#5f396a, #be95b7);
@@ -20,7 +20,7 @@ a.button.yahoo:hover, .button.yahoo:hover, .index-item-button {
     color: white;
   }
 
-a.button.yahoo:active, .button.yahoo:active, .index-item-button {
+a.button.yahoo:active, .button.yahoo:active, {
     background: #5f396a;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5f396a), to(#be95b7));
     background: -moz-linear-gradient(#5f396a, #be95b7);
@@ -32,11 +32,7 @@ a.button.yahoo:active, .button.yahoo:active, .index-item-button {
   align-self: flex-end;
 }
 
-.index-item-button {
-  max-width: 70px;
-  max-height: 35px;
-  font-size: 70%;
-}
+
  // main page buttons
 .button.main {
   display: flex;
@@ -75,4 +71,8 @@ a.button.yahoo:active, .button.yahoo:active, .index-item-button {
 .dropbtn {
   // width: 80%;
   max-width: 670px;
+}
+
+.button-delete-workouts {
+  font-size: 15px;
 }

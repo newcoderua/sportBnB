@@ -17,6 +17,7 @@ import BuddiesFormContainer from './buddies/buddies_form_container';
 import SearchFormContainer from './buddies/search_form_container';
 import AccountFormContainer from './user/account_form_container';
 import WorkoutContainer from './workout/workout_form_container';
+import ReservationFormContainer from './reservation/reservation_form_container';
 
 
 const App = () => (
@@ -45,6 +46,7 @@ const App = () => (
             <Route exact path="/buddies" component={SearchFormContainer} />
             <Route path="/users/:account" component={AccountFormContainer} />
             <Route path="/workouts" component={WorkoutContainer} />
+            <Route path="/reservations/:buddyId" component={ReservationFormContainer} />
             <MainPageContainer />
           </Switch>
       </div>

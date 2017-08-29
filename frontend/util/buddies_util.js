@@ -6,3 +6,10 @@ export const fetchBuddies = (filters) => {
     data: { filters }
   })
 };
+
+// export const fetchBuddy = (id) => {
+//   return $.ajax({
+//     method: 'GET',
+//     url: "/api/buddies"
+//   });
+// }

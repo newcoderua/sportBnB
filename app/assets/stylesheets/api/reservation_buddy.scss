@@ -1,0 +1,58 @@
+.main-reservation-buddy-form {
+  background-image: image-url('reservation-buddy.png');
+  width: 100%;
+  min-height: 700px;
+  height: 850px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-buddy-form {
+  width: 82%;
+
+  height: 80%;
+  min-height:400px;
+  display: flex;
+  justify-content: center;
+  background-color: #d3cdd5;
+  opacity: 0.9;
+  border: 1px solid #4b2a55;
+  border-radius: 5px;
+}
+
+.buddy-personal-info {
+  display: flex;
+  justify-content: center;
+  background-color: #efebf2;
+  width: 40%;
+  min-height: 80%;
+  border: 1px solid grey;
+  border-radius: 7px;
+  margin: 15px;
+  padding: 15px;
+  font-style: italic;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #4b2a55;
+}
+
+#buddy-image-reservation {
+  min-width: 250px;
+  min-height: 250px;
+  width: 70%;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.form-reservation-buddy {
+  width: 60%;
+  min-height: 80%;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  border: 1px solid grey;
+  margin: 15px;
+}
