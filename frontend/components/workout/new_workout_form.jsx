@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 // import momentLocalizer from '../../../node_modules/react-widgets/lib/localizers/moment';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-// import PlacesAutocomplete, { geocodeByAddress } from 'react-places-autocomplete';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import Autocomplete from 'react-google-autocomplete';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -44,7 +45,12 @@ class NewWorkoutForm extends React.Component {
     handleSubmit(e) {
       e.preventDefault();
       const id = this.props.currentUser.id;
-      this.props.createWorkout(merge({}, this.state, { user_id: id })).then(this.props.closeModal)
+      this.props.createWorkout(merge({}, this.state, { user_id: id })).then(this.props.closeModal);
+
+      geocodeByAddress(this.state.address)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => console.log('Success', latLng))
+      .catch(error => console.error('Error', error))
     }
 
     update(property) {
@@ -75,12 +81,17 @@ class NewWorkoutForm extends React.Component {
                 </select>
               </div>
 
-              <div>
+              <div className="provide-your-address">
                 <h3>Provide your address</h3>
-                <textarea
-                  id="address"
-                  onChange={this.update('address')}
-                  placeholder="159 w 25 street" />
+                <Autocomplete
+                    onPlaceSelected={(place) => {
+                      console.log(place);
+                    }}
+                    value={this.state.address}
+                    onChange={this.update('address')}
+                    types={['address']}
+                    componentRestrictions={{country: "usa"}}
+                />
               </div>
 
               <h3>Pick a date</h3>
@@ -108,3 +119,9 @@ class NewWorkoutForm extends React.Component {
 
 
 export default NewWorkoutForm;
+
+// <h3>Provide your address</h3>
+//   <PlacesAutocomplete
+//   value={this.state.address}
+//   onChange={this.update('address')}
+// />
