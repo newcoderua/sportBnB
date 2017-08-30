@@ -4,12 +4,17 @@ import { Link, withRouter, NavLink } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+      // let buddy = false;
+      // if ((props.location.pathname.split('becomeBuddy').length) === 2) {
+      //   buddy = true;
+      // }
     this.state = {
       username: '',
       password: '',
       email: "",
+      // buddy: buddy,
     };
-
+    // debugger
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginGuest = this.loginGuest.bind(this);
   }
@@ -77,55 +82,64 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return(
-      <div id="overlay">
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
-            <img src={ window.staticImages.sportBnB } className="logo-modalpage"/>
-            <br/>
-          <div className="login-form">
-            <NavLink to="/" id="close-modal" className="button yahoo">✖️</NavLink>
-            <br/>
-            <label>Username:
+    // debugger
+    // if (this.state.buddy === false) {
+      return(
+        <div id="overlay">
+          <div className="login-form-container">
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+              <img src={ window.staticImages.sportBnB } className="logo-modalpage"/>
               <br/>
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Email:
+            <div className="login-form">
+              <NavLink to="/" id="close-modal" className="button yahoo">✖️</NavLink>
               <br/>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
+              <label>Username:
+                <br/>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
               <br/>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input type="submit" className="button yahoo" value="Submit" />
-            <br/>
-            <button className="button yahoo" onClick={this.loginGuest}>Log In as Guest</button>
+              <label>Email:
+                <br/>
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <label>Password:
+                <br/>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <input type="submit" className="button yahoo" value="Submit" />
+              <br/>
+              <button className="button yahoo" onClick={this.loginGuest}>Log In as Guest</button>
 
-            <br/>
-            { this.navLink() }
-            { this.renderErrors()}
+              <br/>
+              { this.navLink() }
+              { this.renderErrors()}
+            </div>
+            </form>
           </div>
-          </form>
         </div>
-      </div>
-    )
+      )
+    // } else {
+    //   return (
+    //     <div>Hey, buddy</div>
+    //   )
+    // }
   }
+
+
 }
 
 export default withRouter(SessionForm);

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
+import Autocomplete from 'react-google-autocomplete';
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -62,7 +63,7 @@ class ReservationForm extends React.Component {
           <div className="reservation-buddy-form">
 
             <div className="buddy-personal-info">
-              <div>
+              <div >
                 <img id="buddy-image-reservation" src={this.props.buddies[this.state.buddy_id].image_url} /><br /><br />
                 Sport : {this.props.buddies[this.state.buddy_id].sport}<br /><br />
                 Name : {this.props.buddies[this.state.buddy_id].name}<br /><br />
@@ -76,12 +77,18 @@ class ReservationForm extends React.Component {
 
                 <div>
 
-                  <div>
+                  <div className='provide-your-location'>
                     <h3>Provide location</h3>
-                    <textarea
-                      id="address"
-                      onChange={this.update('address')}
-                      placeholder="159 w 25 street" />
+                      <Autocomplete
+                          onPlaceSelected={(place) => {
+                            this.setState( {address: place.formatted_address} )
+                            console.log(place);
+                          }}
+                          value={this.state.address}
+                          onChange={this.update('address')}
+                          types={['address']}
+                          componentRestrictions={{country: "usa"}}
+                      />
                   </div>
 
                   <h3>Pick a date</h3>

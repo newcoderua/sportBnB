@@ -1,6 +1,8 @@
 .main-reservation-buddy-form {
   background-image: image-url('reservation-buddy.png');
-  width: 100%;
+  max-width: 100%;
+  // width: 1500px;
+  // max-width: 2000px;
   min-height: 700px;
   height: 850px;
   background-size: cover;
@@ -13,7 +15,8 @@
 
 .reservation-buddy-form {
   width: 82%;
-
+  max-width: 1200px;
+  min-width: 300px;
   height: 80%;
   min-height:400px;
   display: flex;
@@ -73,4 +76,11 @@
 
 #textarea-modal {
   min-width: 300px;
+}
+
+.provide-your-location input {
+  min-width: 250px;
+  width: 90%;
+  min-height: 30px;
+
 }

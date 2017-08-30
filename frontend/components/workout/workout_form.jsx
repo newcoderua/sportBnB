@@ -62,13 +62,11 @@ class WorkoutForm extends React.Component {
           <div className="profile-navigation-content">
             <div className="header-workout-content">
               <div>
-                <h4>Let's say you want to workout, but</h4><br />
-                - you do not know how to pick buddy<br />
-                - or there are no available buddies for now<br />
-                - or you want some random buddy to workout with you<br />
-                - etc. <br />
-              <h4>You can post workout so our community (everybuddy 🤣) can see your post and can accept your request</h4>
-                <h3> Workout's requests </h3><br />
+                <span id="header-account-reservations"><h4>Here you can post request for wanted workout</h4></span>
+
+              <h4>So our community (everyBUDDY 🤣) can see your post and can accept your request</h4>
+                <h5>Than your status will be changed from pending to accepted </h5>
+                <div id="account-workout-requests"><h3> Workout's requests </h3></div>
               </div>
               <div>
                 <button className="button yahoo" onClick={this.openNewWorkoutFormContainer.bind(this)}>Post workout</button>

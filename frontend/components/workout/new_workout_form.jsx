@@ -54,7 +54,10 @@ class NewWorkoutForm extends React.Component {
     }
 
     update(property) {
-      return e => this.setState({ [property]: e.target.value })
+      return e => {
+        // debugger
+        return this.setState({ [property]: e.target.value })
+      }
     }
 
     render() {
@@ -85,6 +88,8 @@ class NewWorkoutForm extends React.Component {
                 <h3>Provide your address</h3>
                 <Autocomplete
                     onPlaceSelected={(place) => {
+                      // debugger
+                      this.setState( {address: place.formatted_address} )
                       console.log(place);
                     }}
                     value={this.state.address}

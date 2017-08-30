@@ -11,7 +11,7 @@ const ReservationItem = ({ reservation, deleteReservation, buddies }) => {
   return (
       <li id="li">
         <div className="reservations-class">
-        <div><img id="reservation-buddy-pict" src={buddies[reservation.buddy_id].image_url} /><br /></div>
+        <div className="img-reservation-buddies"><img id="reservation-buddy-pict" src={buddies[reservation.buddy_id].image_url} /><br /></div>
         <div className="reservation-buddy-info-account">
           <div>
             <b>Buddy name : </b>{buddies[reservation.buddy_id].name}<br />

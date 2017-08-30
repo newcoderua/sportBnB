@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = ({ session }) => {
+  // debugger
   return {
     loggedIn: Boolean(session.currentUser),
     errors: session.errors

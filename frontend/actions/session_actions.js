@@ -18,7 +18,12 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-
+export const updateUser = user => dispatch => (
+  APIUtil.update(user)
+    .then(user => (
+      dispatch(receiveCurrentUser(user))
+  ))
+);
 
 export const signup = user => dispatch => (
   APIUtil.signup(user)

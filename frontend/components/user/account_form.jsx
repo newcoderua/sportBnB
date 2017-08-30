@@ -8,20 +8,35 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-// import SearchForm '../search_form/search_form_container';
 
 class AccountForm extends React.Component {
   constructor(props) {
     super(props);
     // debugger
     this.state = {
-      username: props.currentUser.username,
-      email: props.currentUser.email,
-      id: props.currentUser.id,
+      // username: props.currentUser.username,
+      // email: props.currentUser.email,
+      // id: props.currentUser.id,
+      // image_url: props.currentUser.image_url,
+      imageFile: null,
+      image_url: null,
+      body: "",
+
     }
   }
 
+  updateFile(e) {
+    var file = e.currentTarget.files[0];
+    this.setState({ imageFile: file }, () => {
+      var formData = new FormData();
+      formData.append("user[avatar]", this.state.imageFile);
+      formData.append("id", this.props.currentUser.id);
+      this.props.updateUser(formData);
+    });
+  }
+
   render() {
+    // debugger
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
@@ -52,14 +67,15 @@ class AccountForm extends React.Component {
               <div>
                 <div className="profile-navigation-content-info">
                   <div className="profile-pic-class">
-                    <img src={ window.staticImages.profilePic }
-                      alt="profile-pic"
-                      id="profile-pic"
-                      />
+                    <img src={this.props.currentUser.image_url} id="profile-pic"/>
+                    <input type="file" onChange={this.updateFile.bind(this)} />
                   </div>
+
+
+
                   <div className="name-email-info-class">
-                    ☞ &nbsp;{this.state.username}<br/><br/>
-                    ✉︎ &nbsp;{this.state.email}
+                    ☞ &nbsp;{this.props.currentUser.username}<br/><br/>
+                  ✉︎ &nbsp;{this.props.currentUser.email}<br />
                 </div>
                 </div>
               </div>

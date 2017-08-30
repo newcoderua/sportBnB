@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const sessionLinks = () => (
+const sessionLinks = () => {
+  // debugger
+  return (
   <nav className="login-signup">
     <Link to="/buddies" className="button yahoo">Buddies</Link>
     &nbsp;&nbsp;
     <Link to="/login" className="button yahoo">Login</Link>
-    &nbsp;&nbsp;
     
   </nav>
-);
+)};
 
 
 const personalGreeting = (currentUser, logout, history) => {
