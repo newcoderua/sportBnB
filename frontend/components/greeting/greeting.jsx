@@ -20,11 +20,11 @@ const personalGreeting = (currentUser, logout, history) => {
     logout().then(() => history.push("/"))
   }
   // debugger
-    if (currentUser.buddy_id !== 0 ) {
+    if (currentUser.buddy_id !== null ) {
       return (
 
         <hgroup className="header-group">
-        
+
           <Link to="/buddies" className="button yahoo">Buddies</Link>
           &nbsp;&nbsp;
           <Link to="/users/account" className="button yahoo">Account</Link>
