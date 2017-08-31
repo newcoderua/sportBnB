@@ -49,7 +49,10 @@ class ReservationForm extends React.Component {
     e.preventDefault();
     // debugger
     const id = this.props.user_id;
-    this.props.createReservation(merge({}, this.state, { user_id: id })).then(() => this.props.history.push("/reservations")) // I can redirect here later
+    this.props.createReservation(merge({}, this.state, { user_id: id })).then(() => {
+      // debugger
+      return this.props.history.push("/reservations")
+    }) // I can redirect here later
   }
 
   render() {

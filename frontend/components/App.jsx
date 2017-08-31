@@ -19,7 +19,7 @@ import AccountFormContainer from './user/account_form_container';
 import WorkoutContainer from './workout/workout_form_container';
 import ReservationFormContainer from './reservation/reservation_form_container';
 import ReservationsContainer from './reservation/reservations_container';
-
+import BecomeBuddyContainer from './buddies/become_buddy_container';
 const App = () => (
   // <Provider>
     // <Router history={hashHistory}>
@@ -32,6 +32,7 @@ const App = () => (
                     id="logo-image"
                     />
                 </NavLink>
+                
               </div>
               <div className="header-buttons-class">
                 <GreetingContainer />
@@ -40,7 +41,8 @@ const App = () => (
         </header>
           <Switch className="switch-class">
 
-            <Route path="/login" component={SessionFormContainer} />
+            <Route exact path="/login" component={SessionFormContainer} />
+            <Route path="/login/:becomeBuddy" component={BecomeBuddyContainer} />
             <Route path="/signup" component={SessionFormContainer} />
             <Route exact path="/buddies/:sport" component={SearchFormContainer} />
             <Route exact path="/buddies" component={SearchFormContainer} />

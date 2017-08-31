@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+  def index
+    # debugger
+    @users = User.all
+  end
+
   def create
     @user = User.new(user_params)
 
@@ -16,7 +21,8 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    
+
+
 
     if @user.update(user_params)
       render :show
@@ -27,6 +33,6 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :email, :avatar)
+    params.require(:user).permit(:username, :password, :email, :avatar, :buddy, :buddy_id)
   end
 end

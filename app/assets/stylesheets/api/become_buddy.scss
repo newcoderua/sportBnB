@@ -1,0 +1,71 @@
+.become-buddy-main-form {
+   background-image: image-url('becomebuddy.png');
+   max-width: 100%;
+   // width: 1500px;
+   // max-width: 2000px;
+   min-height: 700px;
+   height: 850px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-become-buddy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+}
+
+.three-meaningless-words {
+  height: 40px;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 3rem;
+  color: white;
+  margin: 20px
+}
+
+.become-buddy-form {
+  min-width: 40%;
+  width: 70%;
+  min-height: 80%;
+  background-color: #eee9e9;
+  // opacity: 0.9;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 40px;
+}
+
+.actual-form-become-buddy {
+  padding: 15px;
+  color: #51305c;
+  text-align: center;
+}
+
+#field-for-become-buddy {
+  // z-index: 1;
+  height: 46px;
+  width: 80%;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.only-sport-modal-content {
+  // max-width: 570px;
+  // width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}

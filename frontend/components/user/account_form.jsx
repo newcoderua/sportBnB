@@ -25,18 +25,32 @@ class AccountForm extends React.Component {
     }
   }
 
+  // componentDidMount() {
+  //   this.props.fetchBuddy(this.props.currentUser.buddy_id)
+  // }
+
   updateFile(e) {
-    var file = e.currentTarget.files[0];
+    const file = e.currentTarget.files[0];
     this.setState({ imageFile: file }, () => {
-      var formData = new FormData();
-      formData.append("user[avatar]", this.state.imageFile);
-      formData.append("id", this.props.currentUser.id);
-      this.props.updateUser(formData);
+      const userFormData = new FormData();
+      userFormData.append("user[avatar]", this.state.imageFile);
+      userFormData.append("id", this.props.currentUser.id);
+      this.props.updateUser(userFormData);
+      // debugger
+      //
+      if (this.props.currentUser.buddy_id !== 0) {
+        const buddyFormData = new FormData();
+        buddyFormData.append("buddy[avatar]", this.state.imageFile);
+        buddyFormData.append("id", this.props.currentUser.buddy_id);
+        this.props.updateBuddy(buddyFormData) // I should pass buddy
+      }
     });
   }
 
   render() {
     // debugger
+    if(this.props.currentUser) {
+
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
@@ -85,7 +99,10 @@ class AccountForm extends React.Component {
         </div>
       </div>
       </div>
-    );
+    )
+  } else {
+    return null
+  };
   }
 }
 

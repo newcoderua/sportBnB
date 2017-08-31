@@ -10,6 +10,7 @@ const mapStateToProps = (state) => {
   reservations: state.reservations,
   buddies: state.buddies,
   filters: state.filters,
+  currentUser: state.session.currentUser
 }};
 
 const mapDispatchToProps = dispatch => ({

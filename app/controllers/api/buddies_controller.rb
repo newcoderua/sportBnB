@@ -24,18 +24,50 @@ class Api::BuddiesController < ApplicationController
       end
 
     end
+    # debugger
     @buddies = buddies
 
     render :index
   end
 
   def show
-    @chef = Buddy.find(params[:id])
+    # debugger
+    @buddy = Buddy.find(params[:id])
+  end
+
+  def update
+    @buddy = Buddy.find_by_id(params[:id])
+
+    if @buddy.update(buddy_params)
+      render :show
+    else
+      render json: { message: "Invalid params for image", status: 404}
+    end
+  end
+
+  def create
+    @buddy = Buddy.new(buddy_params)
+    #later I need to fix it, so I can create buddy only once
+    # debugger
+
+    # current_user.buddy = true
+    if @buddy.valid? && current_user.valid?
+      @buddy.save!
+      current_user.buddy_id = @buddy.id
+      # debugger
+      current_user.image_url = @buddy.image_url
+      current_user.save!
+    # 99 cats solution , approving car rental request
+      render :show
+    else
+      render json: @buddy.errors.full_messages, status: 422
+    end
+
   end
 
   private
 
   def buddy_params
-    params.require(:buddy).permit(:name, :sport, :best_achievement, :zip)
+    params.require(:buddy).permit(:name, :sport, :best_achievement, :zip, :rate, :image_url, :avatar)
   end
 end

@@ -41,7 +41,7 @@ class BuddiesForm extends React.Component {
         <div className="buddies-index-main">
           <section className="buddies-index">
             <ul className="index-ul">
-              {Object.keys(this.props.buddies).map( id => {
+              {Object.keys(this.props.buddies).reverse().map( id => {
                 return <BuddyIndexItem
                       key={id}
                       buddy={this.props.buddies[id]}

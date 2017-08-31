@@ -9,8 +9,25 @@
 
 .header-nav-class {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 90%;
   height: 75px;
+}
+
+.header-logo-class img {
+  width: 30%;
+  height: 70px;
+}
+
+.header-buttons-class {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-group {
+  width: 70%;
+  text-align: right;
+  min-width: 400px;
 }

@@ -15,9 +15,10 @@
 
 class Buddy < ApplicationRecord
   validates :name, :sport, :best_achievement, presence: true
-
+  has_attached_file :avatar, default_url: "profile-pic.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   has_many :feedbacks
   has_many :reservations
+  # belongs_to :user
 
-  
 end

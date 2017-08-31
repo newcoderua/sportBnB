@@ -29,6 +29,7 @@ class User < ApplicationRecord
 
   has_many :workouts
   has_many :reservations
+  # has_many :buddies
 
   attr_reader :password
 

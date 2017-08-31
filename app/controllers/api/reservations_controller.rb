@@ -3,8 +3,12 @@ class Api::ReservationsController < ApplicationController
   def index
     reservations = Reservation.all
 
-    if (current_user)
+    if (current_user && (current_user.buddy_id === 0))
       reservations = reservations.where(user_id: current_user.id)
+      # debugger
+    else
+
+      reservations = reservations.where(buddy_id: current_user.buddy_id)
     end
     # debugger
     @reservations = reservations.reverse
