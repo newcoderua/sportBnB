@@ -9,7 +9,7 @@ const handleChange = (filter, updateFilter) => {
 }
 
 const FilterForm = ({ sport, minRate, maxRate, zip, updateFilter }) => {
-  const sports  = ["any", "swimming", "soccer", "basketball", "box", "running", "volleyball", "crossfit", "golf", "pingpong"]
+  const sports  = ["any", "swimming", "soccer", "basketball", "boxing", "running", "volleyball", "crossfit", "golf", "pingpong"]
   // debugger
   let sportsOptions = sports.map( (sportOption) => {
     if ((sport === sportOption)) {
