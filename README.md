@@ -6,7 +6,7 @@ SportBnB is a full-stack web application inspired by TaskRabbit simulating a sit
 
 SportBnB is a practice coding project by Vladyslav Stadnyk.
 
-![alt text](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/forproduction.png?raw=true)
+![main page](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/forproduction.png?raw=true)
 
 ## Key Features
 
@@ -29,8 +29,30 @@ Users table contains the following columns:
 
 ### Real time filtering for buddies
 
-Buddies( professional coaches ) can be filtered in real time by categories:
+Buddies( professional coaches ) can be filtered by categories:
 * type of sport
 * min rate $
 * max rate $
 * city (NYC and SF for now)
+
+![buddies page](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/buddies_screenshot.png?raw=true)
+
+Users can book buddy (send request for desirable workout ) and buddies can actually accept or decline request in profile page.
+
+Buddies table looks like this:
+* name
+* sport
+* zip
+* rate
+* best_achievement
+* image_url
+
+User may filter Buddies in real time by sending AJAX request to backend where rails server will sort buddies using filter params(it is slice of the state). The buddies controller will take the params and make SQL requests using ActiveRecords.
+
+Also on the main page you can select type of sport you like and it will redirect you to all buddies with sport column already selected for you.
+
+### Reservation Form with Date dropdown menu and Location Autocompletion
+
+![reservation page](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/reservation_screenshot.png?raw=true)
+
+![gif_readme](https://gifs.com/gif/sport-selection-P1RLky)
