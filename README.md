@@ -55,4 +55,4 @@ Also on the main page you can select type of sport you like and it will redirect
 
 ![reservation page](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/reservation_screenshot.png?raw=true)
 
-![gif_readme](https://gifs.com/gif/sport-selection-P1RLky)
+![gif_readme](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/gif.gif?raw=true)
