@@ -24,10 +24,10 @@ class ReservationIndex extends React.Component {
 
   render() {
     const { reservations } = this.props;
-    if ((Object.keys(this.props).length === 0) || (reservations === undefined)) {
+    if ((Object.keys(this.props).length === 0) || (reservations === undefined) || (this.props.currentUser === null)) {
       return null;
     }
-    // debugger
+    debugger
     if (this.props.currentUser.buddy_id !== null) {
       <h1>Your Account</h1>
       return(

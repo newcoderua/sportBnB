@@ -110,7 +110,7 @@ class ReservationForm extends React.Component {
                         placeholder=" like 'I want all 8 abs after my first workout' " />
                     </div>
 
-                    <button className="yahoo button" type="submit">Submit</button>
+                    <button className="yahoo button" type="submit">Book Buddy</button>
                 </div>
 
               </form>
