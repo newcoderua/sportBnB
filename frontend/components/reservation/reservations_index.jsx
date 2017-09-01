@@ -67,7 +67,7 @@ class ReservationIndex extends React.Component {
         <div className="outer-main-profile-page">
           <div className="header-account">
             <div>
-              <h1>Your Account</h1>
+
             </div>
           </div>
 
@@ -80,7 +80,7 @@ class ReservationIndex extends React.Component {
               </div>
 
               <div className="not-selected-profile-link">
-                <Link to="/workouts">Workouts</Link><br/><br/>
+                <Link to="/workouts">Wish List</Link><br/><br/>
               </div>
 
               <div className="selected-profile-link">

@@ -3,9 +3,9 @@ class Api::ReservationsController < ApplicationController
   def index
     reservations = Reservation.all
 
-    if (current_user && (current_user.buddy_id === 0))
+    # debugger
+    if (current_user && (current_user.buddy_id === nil))
       reservations = reservations.where(user_id: current_user.id)
-      # debugger
     else
 
       reservations = reservations.where(buddy_id: current_user.buddy_id)
@@ -18,6 +18,7 @@ class Api::ReservationsController < ApplicationController
     # debugger
     @reservation = Reservation.new(reservation_params)
     @reservation.user_id = current_user.id
+    # debugger
     if @reservation.save
       render :show
     else
