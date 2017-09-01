@@ -72,4 +72,19 @@ Reservations index sections are ordered by date of the reservations.
 
 
 ### Become a buddy Form
-The TaskRabbit let users to become a tasker if they want to make money by doing some work. My web app SportBnB has the same functionality.
+The TaskRabbit lets users to become a taskers if they want to make money by doing some work. My web app SportBnB has the same functionality.
+
+
+![become_buddy_gif](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/becomeGif.gif?raw=true)
+
+By extending your account - you actually create new buddy instance, so after creating -  user's buddy_id column becoming buddy.id. So at the same time you are user and buddy. After you became buddy you can not see become buddy button anymore. And also your profile page rendering differently.
+
+### Future Implementations
+
+SportBnB is a work in progress. It has been a great learning experience, but obviously a lot is left to do.
+
+The following features will be added in the near future:
+
+* Buddies can actually accept and decline requests for workout.
+* Users can cancel their requests for workouts.
+* Users can rate buddies and leave reviews on them
