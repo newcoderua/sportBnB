@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .outer-main-profile-page {
   border: 1px solid lightgrey;
-  background-color: #ece7ed;
+  // background-color: #ece7ed;
+  background-image: image-url('back3.png');
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header-account {
@@ -18,6 +23,7 @@
 .main-profile-page {
   display: flex;
   justify-content: center;
+  opacity: 0.9;
   margin-top: 0px;
   padding-top: 0px;
   min-height: 640px;
@@ -26,9 +32,14 @@
 
 .container-profile {
   display: flex;
-  justify-content: start;
-  width: 80%;
+  justify-content: flex-start;
+  width: 70%;
   background-color: #f2efef;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+
+  // height: 80%;
   // background-color: #ece7ed;
 }
 .workouts-class {
@@ -39,7 +50,8 @@
   width: 25%;
   // padding: 10px;
   // margin: 10px;
-  border: 1px solid #9c83a1;
+  background-color: #e7e7e7;
+  border: 3px solid #9c83a1;
   border-radius: 3px;
   font-size: 20px;
 }
@@ -55,7 +67,7 @@
   border: 1px solid #9c83a1;
   padding: 10px;
   // margin: 10px;
-  border: 1px solid #9c83a1;
+  border: 3px solid #9c83a1;
   border-left: none;
   border-radius: 3px;
   font-size: 20px;
@@ -64,4 +76,15 @@
 .workouts-class {
   border-bottom: 1px solid #9c83a1;
   margin: 10px;
+}
+
+#header-account-reservations {
+  text-align: center;
+}
+
+#text-wish-list {
+  text-align: center;
+  margin: 5px;
+  font-size: 25px;
+  font-family: monospace;
 }

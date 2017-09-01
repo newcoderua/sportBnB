@@ -4,12 +4,13 @@
 
 .selected-profile-link {
   background-color: #ece7ed;
-  border-radius: 3px;
+  // border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-left: 4px solid#82329a;
   height: 69px;
+  border-bottom: 1px solid grey;
 }
 
 .not-selected-profile-link {
@@ -47,19 +48,27 @@
   border-radius: 50px;
 }
 
+input[type="file" i] {
+    align-items: center;
+    color: #ebe7e5;
+    text-align: start;
+}
+
 .name-email-info-class {
   width: 50%;
   display: flex;
   align-items: center;
   margin-left: 10px;
   font-size: 25px;
+  border-left: 1px solid grey;
+  padding-left: 5px;
   // border: 1px solid black;
 }
 
 .header-workout-content {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
 
 }
 

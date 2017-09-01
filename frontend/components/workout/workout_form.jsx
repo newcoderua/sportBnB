@@ -38,11 +38,11 @@ class WorkoutForm extends React.Component {
       return null;
     }
     // debugger
+    // <h1>Your Account</h1>
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
           <div>
-            <h1>Your Account</h1>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ class WorkoutForm extends React.Component {
               <Link to="/users/account">Profile</Link><br/><br/><br/>
             </div>
             <div className="selected-profile-link">
-              <Link to="/workouts">Workouts</Link><br/><br/>
+              <Link to="/workouts">Wish List</Link><br/><br/>
             </div>
             <div className="not-selected-profile-link">
               <Link to="/reservations">Reservations</Link><br/><br/>
@@ -62,11 +62,11 @@ class WorkoutForm extends React.Component {
           <div className="profile-navigation-content">
             <div className="header-workout-content">
               <div>
-                <span id="header-account-reservations"><h4>Here you can post request for wanted workout</h4></span>
+                <span id="header-account-reservations"><h4>Here you can post requests for wanted workouts</h4></span>
 
-              <h4>So our community (everyBUDDY 🤣) can see your post and can accept your request</h4>
-                <h5>Than your status will be changed from pending to accepted </h5>
-                <div id="account-workout-requests"><h3> Workout's requests </h3></div>
+              <span id="text-wish-list"><h4>Our community (everyBUDDY 🤣) can see your request and can accept your request</h4></span>
+
+                <div id="account-workout-requests"><h3> History of requests </h3></div>
               </div>
               <div>
                 <button className="button yahoo" onClick={this.openNewWorkoutFormContainer.bind(this)}>Post workout</button>

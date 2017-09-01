@@ -28,12 +28,12 @@ class ReservationIndex extends React.Component {
       return null;
     }
     // debugger
-    if (this.props.currentUser.buddy_id !== 0) {
+    if (this.props.currentUser.buddy_id !== null) {
+      <h1>Your Account</h1>
       return(
         <div className="outer-main-profile-page">
           <div className="header-account">
             <div>
-              <h1>Your Account</h1>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ class ReservationIndex extends React.Component {
               </div>
 
               <div className="not-selected-profile-link">
-                <Link to="/workouts">Workouts</Link><br/><br/>
+                <Link to="/workouts">Wish List</Link><br/><br/>
               </div>
 
               <div className="selected-profile-link">
@@ -55,7 +55,7 @@ class ReservationIndex extends React.Component {
 
               </div>
             <div className="profile-navigation-content">
-                <h2>Incoming Reservations</h2>
+                <div id="incoming-reservations"><h2>Incoming Reservations</h2></div>
                 <IncomingReservationContainer />
             </div>
           </div>

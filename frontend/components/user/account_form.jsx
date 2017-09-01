@@ -49,13 +49,13 @@ class AccountForm extends React.Component {
 
   render() {
     // debugger
+    // <h1>Your Account</h1>
     if(this.props.currentUser) {
 
     return(
       <div className="outer-main-profile-page">
         <div className="header-account">
           <div>
-            <h1>Your Account</h1>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ class AccountForm extends React.Component {
               <Link to="/users/account">Profile</Link><br/><br/><br/>
             </div>
             <div className="not-selected-profile-link">
-              <Link to="/workouts">Workouts</Link><br/><br/>
+              <Link to="/workouts">Wish List</Link><br/><br/>
             </div>
             <div className="not-selected-profile-link">
               <Link to="/reservations">Reservations</Link><br/><br/>
@@ -90,7 +90,7 @@ class AccountForm extends React.Component {
                   <div className="name-email-info-class">
                     ☞ &nbsp;{this.props.currentUser.username}<br/><br/>
                   ✉︎ &nbsp;{this.props.currentUser.email}<br />
-                </div>
+              </div>
                 </div>
               </div>
             </div>
