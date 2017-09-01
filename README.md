@@ -6,25 +6,31 @@ SportBnB is a full-stack web application inspired by TaskRabbit simulating a sit
 
 SportBnB is a practice coding project by Vladyslav Stadnyk.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/forproduction.png?raw=true)
+
+## Key Features
+
+### User Signup and Authentication
+
+Users must have an account to be able to receive the app's services. Upon signing up, the user will be redirected to their default view (the reservations page)
+
+Users table contains the following columns:
+
+* id
+* name
+* email
+* image_url
+* password_digest (For storing encrypted passwords)
+* session_token (Used for user login authentication)
+* User must be authenticated to be able to navigate majority of the web app. However a ( Guest Login) button is available for demonstration purposes.
+* buddy_id
+* workout_id
 
 
-Things you may want to cover:
+### Real time filtering for buddies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Buddies( professional coaches ) can be filtered in real time by categories:
+* type of sport
+* min rate $
+* max rate $
+* city (NYC and SF for now)
