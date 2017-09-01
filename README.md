@@ -51,8 +51,25 @@ User may filter Buddies in real time by sending AJAX request to backend where ra
 
 Also on the main page you can select type of sport you like and it will redirect you to all buddies with sport column already selected for you.
 
+![gif_readme](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/gif.gif?raw=true)
+
 ### Reservation Form with Date dropdown menu and Location Autocompletion
+
+The core function of the web app is for users being able to book buddies(make reservations). The reservation form is linked from both the buddy filter component as well as the buddy details component. The reservation form takes advantage of Google's Autocomplete public API to give user suggestions for the address as it is being entered. When you successfully create a reservation, it will redirect you to your profile page, where you can see all your reservations. At the same time buddy(that you booked can see incoming request for reservation).
 
 ![reservation page](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/reservation_screenshot.png?raw=true)
 
-![gif_readme](https://github.com/newcoderua/sportBnB/blob/master/app/assets/images/gif.gif?raw=true)
+Reservation table contains the following columns:
+* user_id
+* buddy_id
+* address
+* date
+* status
+* details
+* paid
+
+Reservations index sections are ordered by date of the reservations.
+
+
+### Become a buddy Form
+The TaskRabbit let users to become a tasker if they want to make money by doing some work. My web app SportBnB has the same functionality.
